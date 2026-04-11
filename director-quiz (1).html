@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>你的灵魂像哪位导演 · Director Personality Test</title>
+<meta name="description" content="35道关于审美、性格与世界观的问题，16位传奇导演，找到属于你的电影人格。">
+<meta property="og:title" content="你的灵魂像哪位导演 · 导演人格测试">
+<meta property="og:description" content="35道关于审美、性格与世界观的问题，16位传奇导演的灵魂等待与你相遇。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07060b;--t1:#ede4d3;--t2:#9e9282;--t3:#5c5448;--red:#d4405a;--gold:#c9a84c}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{font-family:'Noto Serif SC','Songti SC',Georgia,serif;background:var(--bg);color:var(--t1);min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:'';position:fixed;inset:0;opacity:.03;pointer-events:none;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.scr{display:none;min-height:100vh;min-height:100dvh;flex-direction:column}.scr.on{display:flex}
+@keyframes up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes upSm{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.anim-up{animation:up .9s cubic-bezier(.22,1,.36,1) both}
+.anim-sm{animation:upSm .45s cubic-bezier(.22,1,.36,1) both}
+.anim-sm2{animation:upSm .5s cubic-bezier(.22,1,.36,1) .06s both}
+
+/* START */
+#s-start{align-items:center;justify-content:center;text-align:center;padding:48px 24px;position:relative;background:linear-gradient(175deg,#0a0810 0%,#100d18 35%,#160a16 65%,#0a0810 100%)}
+.sg{position:absolute;border-radius:50%;filter:blur(100px);opacity:.07;pointer-events:none}
+.sg.a{top:-10%;left:40%;width:500px;height:500px;background:var(--red)}
+.sg.b{bottom:5%;right:20%;width:300px;height:300px;background:var(--gold)}
+.sw{position:relative;z-index:2;max-width:480px}
+.si{font-size:56px;margin-bottom:12px;display:inline-block;animation:drift 4s ease-in-out infinite}
+.st{font-size:clamp(26px,7vw,40px);font-weight:700;letter-spacing:5px;line-height:1.4;margin-bottom:8px;background:linear-gradient(135deg,var(--t1),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ss{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--t3);letter-spacing:5px;margin-bottom:40px}
+.sd{font-size:15px;color:var(--t2);line-height:2.2;margin-bottom:48px}
+.sb{display:inline-block;background:0 0;border:1px solid rgba(237,228,211,.2);color:var(--t1);padding:17px 60px;font-size:15px;font-family:inherit;letter-spacing:5px;cursor:pointer;transition:all .5s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.sb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--red),var(--gold));opacity:0;transition:opacity .5s}
+.sb:hover,.sb:active{border-color:transparent;letter-spacing:8px;transform:scale(1.02)}
+.sb:hover::before,.sb:active::before{opacity:.12}
+.sb span{position:relative;z-index:1}
+.sm{color:var(--t3);font-size:12px;margin-top:32px;letter-spacing:2px;font-family:'Courier New',monospace}
+
+/* QUIZ */
+#s-quiz{background:linear-gradient(175deg,#0a0810,#0e0c14)}
+.qh{padding:16px 20px 14px;position:sticky;top:0;z-index:10;background:rgba(10,8,16,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(237,228,211,.04)}
+.qp{display:flex;align-items:center;gap:12px}
+.qb{flex:1;height:2px;background:rgba(237,228,211,.07);border-radius:1px;overflow:hidden}
+.qf{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .6s cubic-bezier(.22,1,.36,1);border-radius:1px}
+.qn{color:var(--t3);font-size:12px;font-family:'Courier New',monospace;min-width:50px;text-align:right}
+.qy{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 18px 48px;max-width:600px;margin:0 auto;width:100%}
+.qt{font-size:clamp(16px,4.2vw,20px);font-weight:600;text-align:center;line-height:1.8;margin-bottom:32px;color:var(--t1)}
+.qo{width:100%;display:flex;flex-direction:column;gap:10px}
+.qx{display:block;width:100%;background:rgba(237,228,211,.025);border:1px solid rgba(237,228,211,.06);color:var(--t2);padding:16px 18px;font-size:clamp(13.5px,3.6vw,15px);line-height:1.7;text-align:left;cursor:pointer;font-family:inherit;transition:all .25s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.qx .le{color:var(--t3);margin-right:8px;font-family:'Courier New',monospace;font-size:12px;transition:color .25s}
+.qx:hover,.qx:active{background:rgba(237,228,211,.055);border-color:rgba(237,228,211,.15);color:var(--t1)}
+.qx:hover .le,.qx:active .le{color:var(--gold)}
+.qx.sel{background:rgba(212,64,90,.12);border-color:rgba(212,64,90,.4);color:var(--t1)}
+.qx.sel .le{color:var(--red)}
+.qx.off{pointer-events:none;opacity:.55}
+
+/* RESULT */
+#s-result{padding:0}
+.rw{max-width:600px;margin:0 auto;padding:48px 20px 56px}
+.rh{text-align:center;margin-bottom:40px}
+.rl{font-size:11px;letter-spacing:6px;font-family:'Courier New',monospace;margin-bottom:18px;text-transform:uppercase}
+.re{font-size:64px;margin-bottom:18px;display:inline-block}
+.rn{font-size:clamp(24px,6.5vw,34px);font-weight:700;letter-spacing:4px;margin-bottom:6px}
+.rne{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--t3)}
+.rk{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:36px}
+.rkw{padding:5px 14px;font-size:12px;letter-spacing:2px;border:1px solid}
+.rc{background:rgba(237,228,211,.025);border:1px solid rgba(237,228,211,.05);padding:28px 24px;margin-bottom:40px}
+.rdt{font-size:14.5px;line-height:2.2;color:#c4b69e;text-indent:2em}
+.rwk{font-size:12.5px;color:var(--t3);font-style:italic;margin-top:18px}
+.rsl{text-align:center;font-size:11px;letter-spacing:5px;color:var(--t2);font-family:'Courier New',monospace;margin-bottom:18px}
+.rr{text-align:center;margin-bottom:40px}
+.rr svg{width:100%;max-width:290px;display:block;margin:0 auto}
+.rts{margin-bottom:40px}
+.rt{margin-bottom:12px}
+.rti{display:flex;justify-content:space-between;margin-bottom:4px}
+.rtn{font-size:12px;color:var(--t2)}
+.rtv{font-size:12px;font-family:'Courier New',monospace}
+.rtk{height:3px;background:rgba(237,228,211,.05)}
+.rtf{height:100%;transition:width 1.4s cubic-bezier(.22,1,.36,1)}
+.r3s{margin-bottom:48px}
+.r3{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(237,228,211,.04)}
+.r3e{font-size:20px;width:32px;text-align:center;flex-shrink:0}
+.r3r{flex:1;min-width:0}
+.r3m{display:flex;justify-content:space-between;margin-bottom:4px}
+.r3n{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r3p{font-size:12px;color:var(--t3);font-family:'Courier New',monospace;flex-shrink:0;margin-left:8px}
+.r3b{height:2px;background:rgba(237,228,211,.05)}
+.r3f{height:100%;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.ra{display:flex;flex-direction:column;align-items:center;gap:12px}
+.rbsh{width:100%;max-width:300px;padding:15px;border:none;font-size:14.5px;font-family:inherit;font-weight:600;letter-spacing:4px;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.rbsh:hover,.rbsh:active{opacity:.85;transform:scale(1.01)}
+.rbre{width:100%;max-width:300px;padding:13px;background:0 0;border:1px solid rgba(237,228,211,.12);color:var(--t2);font-size:13.5px;font-family:inherit;letter-spacing:4px;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.rbre:hover,.rbre:active{border-color:rgba(237,228,211,.25);color:var(--t1)}
+.rfo{text-align:center;margin-top:48px;font-size:10px;color:#2e2a25;letter-spacing:3px;font-family:'Courier New',monospace}
+.tst{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(30,28,36,.95);border:1px solid rgba(237,228,211,.1);color:var(--t1);padding:12px 28px;font-size:13px;font-family:'Noto Serif SC',serif;letter-spacing:1px;z-index:10000;opacity:0;transition:all .4s ease;pointer-events:none;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:2px;white-space:nowrap}
+.tst.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:420px){.sb{padding:15px 44px;font-size:14px;letter-spacing:4px}.qy{padding:24px 16px 40px}.rw{padding:40px 16px 48px}.rc{padding:22px 18px}}
+@media(max-width:350px){.st{letter-spacing:3px}.qt{font-size:15px}}
+@supports(padding:max(0px)){.qh{padding-top:max(16px,env(safe-area-inset-top))}.rw{padding-bottom:max(56px,calc(env(safe-area-inset-bottom)+40px))}#s-start{padding-bottom:max(48px,calc(env(safe-area-inset-bottom)+32px))}}
+</style>
+</head>
+<body>
+<div class="tst" id="tst"></div>
+<div class="scr on" id="s-start">
+  <div class="sg a"></div><div class="sg b"></div>
+  <div class="sw anim-up">
+    <div class="si">🎬</div>
+    <h1 class="st">你的灵魂像哪位导演</h1>
+    <p class="ss">Director Personality Test</p>
+    <p class="sd">35道关于审美、性格与世界观的问题<br>16位传奇导演的灵魂等待与你相遇<br>找到属于你的电影人格</p>
+    <button class="sb" id="go"><span>开 始 测 试</span></button>
+    <p class="sm">约需 5–8 分钟 · 共 35 题</p>
+  </div>
+</div>
+<div class="scr" id="s-quiz">
+  <div class="qh"><div class="qp"><div class="qb"><div class="qf" id="qf"></div></div><span class="qn" id="qn"></span></div></div>
+  <div class="qy"><h2 class="qt" id="qt"></h2><div class="qo" id="qo"></div></div>
+</div>
+<div class="scr" id="s-result"><div class="rw" id="rw"></div></div>
+<script>
+var D={kubrick:{name:"\u65AF\u5766\u5229\u00B7\u5E93\u5E03\u91CC\u514B",en:"Stanley Kubrick",emoji:"\u{1F3AF}",col:"#1a1a2e",ac:"#e94560",tr:{perfectionism:95,emotion:40,rebellion:70,philosophy:90,visual:95,narrative:75,humor:35,humanity:45},desc:"\u4F60\u662F\u4E00\u4E2A\u8FFD\u6C42\u6781\u81F4\u5B8C\u7F8E\u7684\u63A7\u5236\u8005\u3002\u4F60\u7684\u5185\u5FC3\u4F4F\u7740\u4E00\u4E2A\u51B7\u9759\u7684\u89C2\u5BDF\u8005\uFF0C\u7528\u8FD1\u4E4E\u89E3\u5256\u5F0F\u7684\u7CBE\u786E\u5BA1\u89C6\u4E16\u754C\u3002\u4F60\u76F8\u4FE1\u5F62\u5F0F\u5373\u5185\u5BB9\uFF0C\u6BCF\u4E00\u4E2A\u7EC6\u8282\u90FD\u5FC5\u987B\u670D\u52A1\u4E8E\u6574\u4F53\u7684\u5B8C\u7F8E\u3002\u4F60\u5BF9\u4EBA\u6027\u6301\u51B7\u5CFB\u4F46\u6DF1\u523B\u7684\u7406\u89E3\uFF0C\u64C5\u957F\u5728\u5B8F\u5927\u53D9\u4E8B\u4E2D\u63ED\u793A\u6587\u660E\u7684\u8352\u8BDE\u3002",kw:["\u5B8C\u7F8E\u4E3B\u4E49","\u51B7\u5CFB\u7406\u6027","\u89C6\u89C9\u5927\u5E08","\u54F2\u5B66\u601D\u8FA8"],wk:"\u300A2001\u592A\u7A7A\u6F2B\u6E38\u300B\u300A\u53D1\u6761\u6A59\u300B\u300A\u95EA\u7075\u300B"},
+miyazaki:{name:"\u5BAB\u5D0E\u9A8F",en:"Hayao Miyazaki",emoji:"\u{1F33F}",col:"#1b4332",ac:"#74c69d",tr:{perfectionism:85,emotion:90,rebellion:55,philosophy:75,visual:90,narrative:80,humor:60,humanity:95},desc:"\u4F60\u62E5\u6709\u4E00\u9897\u6C38\u8FDC\u5E74\u8F7B\u7684\u5FC3\u7075\u3002\u4F60\u76F8\u4FE1\u81EA\u7136\u7684\u529B\u91CF\uFF0C\u76F8\u4FE1\u5584\u826F\u7684\u4EF7\u503C\uFF0C\u76F8\u4FE1\u6BCF\u4E2A\u5B69\u5B50\u773C\u4E2D\u7684\u4E16\u754C\u624D\u662F\u771F\u5B9E\u7684\u3002\u4F60\u7528\u6E29\u67D4\u800C\u575A\u5B9A\u7684\u7B14\u89E6\u63CF\u7ED8\u98DE\u7FD4\u7684\u68A6\u60F3\uFF0C\u5728\u5947\u5E7B\u4E2D\u5BC4\u6258\u5BF9\u73B0\u5B9E\u4E16\u754C\u6700\u6DF1\u6C89\u7684\u5173\u6000\u3002",kw:["\u6E29\u6696\u6CBB\u6108","\u81EA\u7136\u5D07\u656C","\u7AE5\u771F\u5E7B\u60F3","\u624B\u5DE5\u5320\u5FC3"],wk:"\u300A\u5343\u4E0E\u5343\u5BFB\u300B\u300A\u9F99\u732B\u300B\u300A\u5929\u7A7A\u4E4B\u57CE\u300B"},
+tarantino:{name:"\u6606\u6C40\u00B7\u5854\u4F26\u8482\u8BFA",en:"Quentin Tarantino",emoji:"\u{1F4A5}",col:"#3d0000",ac:"#ff6b35",tr:{perfectionism:60,emotion:55,rebellion:95,philosophy:40,visual:70,narrative:90,humor:85,humanity:50},desc:"\u4F60\u662F\u4E00\u4E2A\u5929\u751F\u7684\u53DB\u9006\u8005\u548C\u8BB2\u6545\u4E8B\u7684\u5929\u624D\u3002\u4F60\u5BF9\u6D41\u884C\u6587\u5316\u6709\u7740\u767E\u79D1\u5168\u4E66\u822C\u7684\u70ED\u60C5\uFF0C\u5584\u4E8E\u5C06\u770B\u4F3C\u4E0D\u76F8\u5173\u7684\u5143\u7D20\u6DF7\u642D\u51FA\u4EE4\u4EBA\u60CA\u53F9\u7684\u5316\u5B66\u53CD\u5E94\u3002\u4F60\u76F8\u4FE1\u5BF9\u8BDD\u7684\u529B\u91CF\uFF0C\u76F8\u4FE1\u66B4\u529B\u7F8E\u5B66\u4E2D\u9690\u85CF\u7684\u8352\u8BDE\u771F\u76F8\u3002",kw:["\u53DB\u9006\u6DF7\u642D","\u8BDD\u75E8\u5929\u624D","\u66B4\u529B\u7F8E\u5B66","\u6587\u5316\u72C2\u70ED"],wk:"\u300A\u4F4E\u4FD7\u5C0F\u8BF4\u300B\u300A\u6740\u6B7B\u6BD4\u5C14\u300B\u300A\u65E0\u803B\u6DF7\u86CB\u300B"},
+wonkar:{name:"\u738B\u5BB6\u536B",en:"Wong Kar-wai",emoji:"\u{1F303}",col:"#0d1b2a",ac:"#00b4d8",tr:{perfectionism:80,emotion:95,rebellion:60,philosophy:70,visual:95,narrative:65,humor:30,humanity:75},desc:"\u4F60\u662F\u4E00\u4E2A\u6C89\u6EBA\u4E8E\u65F6\u95F4\u4E0E\u8BB0\u5FC6\u7684\u8BD7\u4EBA\u3002\u4F60\u654F\u611F\u3001\u591A\u60C5\uFF0C\u5584\u4E8E\u6355\u6349\u90A3\u4E9B\u8F6C\u77AC\u5373\u901D\u7684\u60C5\u7EEA\u788E\u7247\u3002\u5728\u4F60\u7684\u4E16\u754C\u91CC\uFF0C\u4E00\u4E2A\u56DE\u7738\u3001\u4E00\u9996\u8001\u6B4C\u3001\u4E00\u76CF\u8DEF\u706F\u90FD\u53EF\u4EE5\u662F\u4E00\u6574\u4E2A\u5B87\u5B99\u3002",kw:["\u60C5\u7EEA\u8BD7\u4EBA","\u5149\u5F71\u9B54\u672F","\u90FD\u5E02\u5B64\u72EC","\u65F6\u95F4\u6267\u5FF5"],wk:"\u300A\u82B1\u6837\u5E74\u534E\u300B\u300A\u91CD\u5E86\u68EE\u6797\u300B\u300A\u6625\u5149\u4E4D\u6CC4\u300B"},
+nolan:{name:"\u514B\u91CC\u65AF\u6258\u5F17\u00B7\u8BFA\u5170",en:"Christopher Nolan",emoji:"\u23F0",col:"#14213d",ac:"#fca311",tr:{perfectionism:85,emotion:60,rebellion:50,philosophy:80,visual:85,narrative:95,humor:25,humanity:60},desc:"\u4F60\u662F\u4E00\u4E2A\u75F4\u8FF7\u4E8E\u65F6\u95F4\u4E0E\u7ED3\u6784\u7684\u5EFA\u7B51\u5E08\u3002\u4F60\u7684\u5927\u8111\u50CF\u4E00\u53F0\u7CBE\u5BC6\u7684\u949F\u8868\uFF0C\u5584\u4E8E\u6784\u5EFA\u590D\u6742\u800C\u4F18\u96C5\u7684\u53D9\u4E8B\u8FF7\u5BAB\u3002\u4F60\u76F8\u4FE1\u667A\u6027\u7684\u529B\u91CF\uFF0C\u559C\u6B22\u7528\u8C1C\u9898\u822C\u7684\u7ED3\u6784\u6311\u6218\u89C2\u4F17\u7684\u8BA4\u77E5\u3002",kw:["\u53D9\u4E8B\u5EFA\u7B51\u5E08","\u65F6\u95F4\u8FF7\u5BAB","\u70E7\u8111\u5927\u5E08","\u5B8F\u5927\u683C\u5C40"],wk:"\u300A\u76D7\u68A6\u7A7A\u95F4\u300B\u300A\u661F\u9645\u7A7F\u8D8A\u300B\u300A\u4FE1\u6761\u300B"},
+fellini:{name:"\u8D39\u5FB7\u91CC\u79D1\u00B7\u8D39\u91CC\u5C3C",en:"Federico Fellini",emoji:"\u{1F3AA}",col:"#2d0036",ac:"#e040fb",tr:{perfectionism:55,emotion:80,rebellion:75,philosophy:65,visual:90,narrative:60,humor:80,humanity:85},desc:"\u4F60\u662F\u4E00\u4E2A\u5728\u73B0\u5B9E\u4E0E\u68A6\u5883\u4E4B\u95F4\u81EA\u7531\u7A7F\u884C\u7684\u9B54\u672F\u5E08\u3002\u4F60\u7684\u4E16\u754C\u5145\u6EE1\u4E86\u9A6C\u620F\u56E2\u822C\u7684\u5947\u89C2\u3001\u8352\u8BDE\u7684\u559C\u5267\u548C\u8BD7\u610F\u7684\u5FE7\u4F24\u3002\u4F60\u70ED\u7231\u751F\u6D3B\u7684\u4E00\u5207\u3002",kw:["\u68A6\u5883\u5927\u5E08","\u8352\u8BDE\u8BD7\u610F","\u9A6C\u620F\u72C2\u6B22","\u751F\u547D\u70ED\u7231"],wk:"\u300A\u516B\u90E8\u534A\u300B\u300A\u751C\u871C\u7684\u751F\u6D3B\u300B\u300A\u5927\u8DEF\u300B"},
+hitchcock:{name:"\u963F\u5C14\u5F17\u96F7\u5FB7\u00B7\u5E0C\u533A\u67EF\u514B",en:"Alfred Hitchcock",emoji:"\u{1F52A}",col:"#1a1a1a",ac:"#b91c1c",tr:{perfectionism:90,emotion:50,rebellion:45,philosophy:55,visual:85,narrative:90,humor:70,humanity:55},desc:"\u4F60\u662F\u4E00\u4E2A\u64CD\u63A7\u4EBA\u5FC3\u7684\u5927\u5E08\u3002\u4F60\u6DF1\u8C59\u6050\u60E7\u4E0E\u6B32\u671B\u7684\u5FC3\u7406\u5B66\uFF0C\u5584\u4E8E\u5728\u5E73\u9759\u7684\u8868\u9762\u4E0B\u57CB\u8BBE\u70B8\u5F39\u3002\u4F60\u6709\u7740\u82F1\u5F0F\u7684\u5E7D\u9ED8\u548C\u7CBE\u786E\uFF0C\u628A\u60AC\u7591\u53D8\u6210\u4E86\u4E00\u95E8\u4F18\u96C5\u7684\u827A\u672F\u3002",kw:["\u60AC\u7591\u5B97\u5E08","\u5FC3\u7406\u64CD\u63A7","\u4F18\u96C5\u6050\u60E7","\u82F1\u5F0F\u5E7D\u9ED8"],wk:"\u300A\u60CA\u9B42\u8BB0\u300B\u300A\u540E\u7A97\u300B\u300A\u8FF7\u9B42\u8BB0\u300B"},
+tarkovsky:{name:"\u5B89\u5FB7\u70C8\u00B7\u5854\u53EF\u592B\u65AF\u57FA",en:"Andrei Tarkovsky",emoji:"\u{1F4A7}",col:"#0a0a0a",ac:"#90a4ae",tr:{perfectionism:75,emotion:85,rebellion:65,philosophy:95,visual:95,narrative:50,humor:10,humanity:80},desc:"\u4F60\u662F\u4E00\u4E2A\u7528\u5F71\u50CF\u96D5\u523B\u65F6\u95F4\u7684\u54F2\u4EBA\u3002\u4F60\u7684\u5185\u5FC3\u4E16\u754C\u6DF1\u9083\u5982\u6D77\uFF0C\u5145\u6EE1\u4E86\u5BF9\u4FE1\u4EF0\u3001\u8BB0\u5FC6\u548C\u5B58\u5728\u7684\u7EC8\u6781\u8FFD\u95EE\u3002\u4F60\u76F8\u4FE1\u827A\u672F\u662F\u4E00\u79CD\u7948\u7977\uFF0C\u662F\u7075\u9B42\u4E0E\u5B87\u5B99\u5BF9\u8BDD\u7684\u65B9\u5F0F\u3002",kw:["\u65F6\u95F4\u96D5\u5851","\u7CBE\u795E\u82E6\u884C","\u5F71\u50CF\u54F2\u5B66","\u8BD7\u610F\u51A5\u60F3"],wk:"\u300A\u6F5C\u884C\u8005\u300B\u300A\u955C\u5B50\u300B\u300A\u4E61\u6101\u300B"},
+spielberg:{name:"\u53F2\u8482\u6587\u00B7\u65AF\u76AE\u5C14\u4F2F\u683C",en:"Steven Spielberg",emoji:"\u2728",col:"#1a237e",ac:"#42a5f5",tr:{perfectionism:70,emotion:85,rebellion:30,philosophy:45,visual:80,narrative:85,humor:55,humanity:90},desc:"\u4F60\u662F\u4E00\u4E2A\u5929\u751F\u7684\u6545\u4E8B\u5927\u738B\u3002\u4F60\u6709\u7740\u6C38\u4E0D\u7184\u706D\u7684\u597D\u5947\u5FC3\u548C\u5B69\u7AE5\u822C\u7684\u60F3\u8C61\u529B\uFF0C\u5584\u4E8E\u7528\u6700\u76F4\u63A5\u7684\u65B9\u5F0F\u89E6\u52A8\u4EBA\u5FC3\u3002\u4F60\u76F8\u4FE1\u7535\u5F71\u7684\u9B54\u529B\u5728\u4E8E\u8BA9\u6BCF\u4E2A\u4EBA\u90FD\u80FD\u627E\u5230\u5171\u9E23\u3002",kw:["\u6545\u4E8B\u5927\u738B","\u7AE5\u5FC3\u672A\u6CDB","\u5927\u4F17\u5171\u9E23","\u9020\u68A6\u5DE5\u5382"],wk:"\u300A\u8F9B\u5FB7\u52D2\u7684\u540D\u5355\u300B\u300AE.T.\u300B\u300A\u4F8F\u7F57\u7EAA\u516C\u56ED\u300B"},
+lynch:{name:"\u5927\u536B\u00B7\u6797\u5947",en:"David Lynch",emoji:"\u{1F300}",col:"#1a0a2e",ac:"#7c4dff",tr:{perfectionism:65,emotion:70,rebellion:90,philosophy:75,visual:85,narrative:40,humor:55,humanity:50},desc:"\u4F60\u662F\u4E00\u4E2A\u5728\u6F5C\u610F\u8BC6\u6DF1\u5904\u6F2B\u6E38\u7684\u68A6\u884C\u8005\u3002\u4F60\u7684\u4E16\u754C\u6CA1\u6709\u903B\u8F91\u7684\u8FB9\u754C\uFF0C\u7F8E\u4E3D\u4E0E\u6050\u6016\u5728\u8FD9\u91CC\u81EA\u7531\u5171\u821E\u3002\u4F60\u5584\u4E8E\u6495\u5F00\u65E5\u5E38\u751F\u6D3B\u5149\u9C9C\u7684\u8868\u9762\uFF0C\u66B4\u9732\u51FA\u5E95\u4E0B\u7684\u6697\u6D41\u3002",kw:["\u8D85\u73B0\u5B9E\u68A6\u5883","\u6F5C\u610F\u8BC6\u63A2\u7D22","\u8BE1\u5F02\u7F8E\u5B66","\u76F4\u89C9\u521B\u4F5C"],wk:"\u300A\u7A46\u8D6B\u5170\u9053\u300B\u300A\u84DD\u4E1D\u7ED2\u300B\u300A\u53CC\u5CF0\u300B"},
+leeang:{name:"\u674E\u5B89",en:"Ang Lee",emoji:"\u{1F38B}",col:"#1b2a1b",ac:"#aed581",tr:{perfectionism:80,emotion:85,rebellion:40,philosophy:70,visual:80,narrative:80,humor:45,humanity:90},desc:"\u4F60\u662F\u4E00\u4E2A\u6E29\u6DA6\u5982\u7389\u7684\u8DE8\u6587\u5316\u4F7F\u8005\u3002\u4F60\u7684\u5185\u5FC3\u6709\u7740\u4E1C\u65B9\u5F0F\u7684\u542B\u84C4\u4E0E\u897F\u65B9\u5F0F\u7684\u5766\u7387\uFF0C\u5584\u4E8E\u5728\u514B\u5236\u4E2D\u91CA\u653E\u6700\u6C79\u6D8C\u7684\u60C5\u611F\u3002\u4F60\u7406\u89E3\u4EBA\u6027\u7684\u590D\u6742\uFF0C\u5C0A\u91CD\u6BCF\u4E00\u79CD\u6587\u5316\u7684\u8868\u8FBE\u3002",kw:["\u4E2D\u897F\u878D\u5408","\u542B\u84C4\u6DF1\u60C5","\u6587\u5316\u6865\u6881","\u9690\u5FCD\u7206\u53D1"],wk:"\u300A\u5367\u864E\u85CF\u9F99\u300B\u300A\u65AD\u80CC\u5C71\u300B\u300A\u5C11\u5E74\u6D3E\u300B"},
+coen:{name:"\u79D1\u6069\u5144\u5F1F",en:"Coen Brothers",emoji:"\u{1F3AD}",col:"#1a1a0a",ac:"#ffab00",tr:{perfectionism:75,emotion:45,rebellion:70,philosophy:65,visual:75,narrative:85,humor:90,humanity:55},desc:"\u4F60\u4EEC\u662F\u4E00\u5BF9\u5728\u8352\u8BDE\u4E16\u754C\u4E2D\u51B7\u773C\u65C1\u89C2\u7684\u8BD7\u523A\u5BB6\u3002\u4F60\u4EEC\u7528\u9ED1\u8272\u5E7D\u9ED8\u89E3\u6784\u4E00\u5207\u2014\u2014\u547D\u8FD0\u3001\u9053\u5FB7\u3001\u7F8E\u56FD\u68A6\u3002\u4F60\u4EEC\u76F8\u4FE1\u751F\u6D3B\u672C\u8EAB\u5C31\u662F\u4E00\u51FA\u6700\u597D\u7684\u9ED1\u8272\u559C\u5267\u3002",kw:["\u9ED1\u8272\u5E7D\u9ED8","\u8352\u8BDE\u8BD7\u523A","\u547D\u8FD0\u73A9\u7B11","\u51B7\u5CFB\u65C1\u89C2"],wk:"\u300A\u8001\u65E0\u6240\u4F9D\u300B\u300A\u51B0\u8840\u66B4\u300B\u300A\u5927\u52D2\u6CE2\u65AF\u57FA\u300B"},
+bong:{name:"\u5949\u4FCA\u660A",en:"Bong Joon-ho",emoji:"\u{1FA9C}",col:"#212121",ac:"#00e676",tr:{perfectionism:80,emotion:70,rebellion:75,philosophy:70,visual:75,narrative:90,humor:75,humanity:75},desc:"\u4F60\u662F\u4E00\u4E2A\u7528\u7C7B\u578B\u7247\u5916\u58F3\u5305\u88F9\u793E\u4F1A\u70B8\u5F39\u7684\u9AD8\u624B\u3002\u4F60\u654F\u9510\u5730\u6D1E\u5BDF\u9636\u5C42\u3001\u6743\u529B\u548C\u4E0D\u5E73\u7B49\u7684\u6697\u6D41\uFF0C\u5374\u7528\u5F15\u4EBA\u5165\u80DC\u7684\u53D9\u4E8B\u8BA9\u89C2\u4F17\u5728\u4EAB\u53D7\u7684\u540C\u65F6\u88AB\u51FB\u4E2D\u3002",kw:["\u7C7B\u578B\u5927\u5E08","\u9636\u5C42\u89E3\u5256","\u5BD3\u6559\u4E8E\u4E50","\u793E\u4F1A\u8BD7\u55BB"],wk:"\u300A\u5BC4\u751F\u866B\u300B\u300A\u6740\u4EBA\u56DE\u5FC6\u300B\u300A\u96EA\u56FD\u5217\u8F66\u300B"},
+wes:{name:"\u97E6\u65AF\u00B7\u5B89\u5FB7\u68EE",en:"Wes Anderson",emoji:"\u{1F3A8}",col:"#4a1942",ac:"#f8bbd0",tr:{perfectionism:90,emotion:65,rebellion:55,philosophy:45,visual:95,narrative:70,humor:75,humanity:65},desc:"\u4F60\u662F\u4E00\u4E2A\u6D3B\u5728\u81EA\u5DF1\u7CBE\u5FC3\u5E03\u7F6E\u7684\u73A9\u5076\u5C4B\u91CC\u7684\u7F8E\u5B66\u5F3A\u8FEB\u75C7\u60A3\u8005\u3002\u4F60\u7684\u4E16\u754C\u6C38\u8FDC\u5BF9\u79F0\u3001\u8272\u5F69\u6591\u6593\u3002\u4F46\u5728\u7AE5\u8BDD\u822C\u7684\u7CBE\u81F4\u8868\u9762\u4E0B\uFF0C\u603B\u6709\u4E00\u4E1D\u6325\u4E4B\u4E0D\u53BB\u7684\u5FE7\u4F24\u3002",kw:["\u5BF9\u79F0\u7F8E\u5B66","\u7AE5\u8BDD\u8272\u5F69","\u5F62\u5F0F\u4E3B\u4E49","\u7CBE\u81F4\u5FE7\u4F24"],wk:"\u300A\u5E03\u8FBE\u4F69\u65AF\u5927\u996D\u5E97\u300B\u300A\u6708\u5347\u738B\u56FD\u300B\u300A\u72AC\u4E4B\u5C9B\u300B"},
+villeneuve:{name:"\u4E39\u5C3C\u65AF\u00B7\u7EF4\u4F26\u7EBD\u74E6",en:"Denis Villeneuve",emoji:"\u{1F3DC}\uFE0F",col:"#1a120b",ac:"#d4a373",tr:{perfectionism:85,emotion:65,rebellion:45,philosophy:80,visual:90,narrative:80,humor:15,humanity:65},desc:"\u4F60\u662F\u4E00\u4E2A\u5728\u5B8F\u5927\u666F\u89C2\u4E2D\u5BFB\u627E\u4EBA\u7C7B\u6E3A\u5C0F\u4E0E\u4F1F\u5927\u7684\u6C89\u601D\u8005\u3002\u4F60\u559C\u6B22\u5E9E\u5927\u7684\u4E16\u754C\u89C2\u548C\u7F13\u6162\u7684\u8282\u594F\uFF0C\u5728\u6C89\u9ED8\u4E2D\u5236\u9020\u6700\u5F3A\u70C8\u7684\u9707\u64BC\u3002",kw:["\u53F2\u8BD7\u6C89\u601D","\u5B8F\u5927\u666F\u89C2","\u7F13\u6162\u9707\u64BC","\u79D1\u5E7B\u8BD7\u610F"],wk:"\u300A\u6C99\u4E18\u300B\u300A\u94F6\u7FFC\u6740\u624B2049\u300B\u300A\u964D\u4E34\u300B"},
+gerwig:{name:"\u683C\u854A\u5854\u00B7\u845B\u97E6\u683C",en:"Greta Gerwig",emoji:"\u{1F497}",col:"#2d1b33",ac:"#ff80ab",tr:{perfectionism:60,emotion:90,rebellion:65,philosophy:55,visual:70,narrative:80,humor:70,humanity:90},desc:"\u4F60\u662F\u4E00\u4E2A\u7528\u771F\u8BDA\u548C\u667A\u6167\u91CD\u65B0\u5B9A\u4E49\u5973\u6027\u53D9\u4E8B\u7684\u58F0\u97F3\u3002\u4F60\u7684\u4F5C\u54C1\u5145\u6EE1\u4E86\u5BF9\u6210\u957F\u9635\u75DB\u7684\u6DF1\u523B\u7406\u89E3\uFF0C\u5BF9\u5E73\u51E1\u751F\u6D3B\u7684\u70ED\u70C8\u62E5\u62B1\u3002\u4F60\u76F8\u4FE1\u6BCF\u4E2A\u666E\u901A\u4EBA\u7684\u6545\u4E8B\u90FD\u503C\u5F97\u88AB\u8BA4\u771F\u8BB2\u8FF0\u3002",kw:["\u5973\u6027\u529B\u91CF","\u6210\u957F\u4E66\u5199","\u771F\u8BDA\u5E7D\u9ED8","\u65E5\u5E38\u53F2\u8BD7"],wk:"\u300A\u82AD\u6BD4\u300B\u300A\u5C0F\u5987\u4EBA\u300B\u300A\u4F2F\u5FB7\u5C0F\u59D0\u300B"}};
+
+var TL={perfectionism:"\u5B8C\u7F8E\u4E3B\u4E49",emotion:"\u60C5\u611F\u6DF1\u5EA6",rebellion:"\u53DB\u9006\u6307\u6570",philosophy:"\u54F2\u5B66\u601D\u8FA8",visual:"\u89C6\u89C9\u6267\u5FF5",narrative:"\u53D9\u4E8B\u80FD\u529B",humor:"\u5E7D\u9ED8\u611F",humanity:"\u4EBA\u6587\u5173\u6000"};
+
+var Q=[
+{q:"\u5982\u679C\u4F60\u53EA\u80FD\u7528\u4E00\u79CD\u989C\u8272\u6765\u62CD\u4E00\u90E8\u7535\u5F71\uFF0C\u4F60\u4F1A\u9009\uFF1A",o:[{t:"\u51B7\u84DD\u8272\u2014\u2014\u758F\u79BB\u3001\u7406\u6027\u3001\u6DF1\u9083",s:{kubrick:3,villeneuve:3,nolan:2,wonkar:2}},{t:"\u6696\u91D1\u8272\u2014\u2014\u6000\u65E7\u3001\u6E29\u67D4\u3001\u6D41\u901D\u7684\u65F6\u5149",s:{wonkar:3,spielberg:2,leeang:2,gerwig:2}},{t:"\u9C9C\u7EA2\u8272\u2014\u2014\u6FC0\u60C5\u3001\u66B4\u529B\u3001\u751F\u547D\u529B",s:{tarantino:3,hitchcock:2,bong:2,kubrick:1}},{t:"\u7FE0\u7EFF\u8272\u2014\u2014\u81EA\u7136\u3001\u751F\u957F\u3001\u5E0C\u671B",s:{miyazaki:3,tarkovsky:2,leeang:2,fellini:1}}]},
+{q:"\u5468\u672B\u72EC\u5904\u65F6\uFF0C\u4F60\u6700\u53EF\u80FD\u5728\u505A\u4EC0\u4E48\uFF1F",o:[{t:"\u53CD\u590D\u6253\u78E8\u67D0\u4E2A\u4F5C\u54C1/\u8BA1\u5212\u7684\u7EC6\u8282",s:{kubrick:3,wes:3,nolan:2,hitchcock:1}},{t:"\u5728\u57CE\u5E02\u8857\u5934\u6F2B\u65E0\u76EE\u7684\u5730\u95F2\u901B\u89C2\u5BDF",s:{wonkar:3,fellini:2,lynch:2,bong:1}},{t:"\u770B\u4E00\u5806B\u7EA7\u7247\u6216\u51B7\u95E8\u8001\u7247",s:{tarantino:3,lynch:2,coen:2,hitchcock:1}},{t:"\u5728\u5927\u81EA\u7136\u4E2D\u6563\u6B65\u6216\u753B\u753B",s:{miyazaki:3,tarkovsky:2,leeang:1,villeneuve:1}}]},
+{q:"\u4F60\u8BA4\u4E3A\u6700\u6253\u52A8\u4EBA\u7684\u6545\u4E8B\u7ED3\u5C40\u662F\uFF1A",o:[{t:"\u5F00\u653E\u5F0F\u7ED3\u5C40\uFF0C\u8BA9\u4EBA\u53CD\u590D\u56DE\u5473",s:{wonkar:3,lynch:2,tarkovsky:2,coen:2}},{t:"\u4E00\u4E2A\u7CBE\u5999\u7684\u53CD\u8F6C\uFF0C\u98A0\u8986\u6240\u6709\u9884\u671F",s:{nolan:3,hitchcock:3,bong:2,kubrick:1}},{t:"\u6E29\u6696\u4F46\u7565\u5E26\u5FE7\u4F24\u7684\u548C\u89E3",s:{miyazaki:3,spielberg:2,leeang:3,gerwig:2}},{t:"\u8352\u8BDE\u5230\u8BA9\u4EBA\u4E0D\u77E5\u8BE5\u54ED\u8FD8\u662F\u8BE5\u7B11",s:{coen:3,fellini:2,tarantino:2,bong:1}}]},
+{q:"\u5982\u679C\u4F60\u662F\u4E00\u4E2A\u5EFA\u7B51\u5E08\uFF0C\u4F60\u4F1A\u8BBE\u8BA1\u4EC0\u4E48\u6837\u7684\u623F\u5B50\uFF1F",o:[{t:"\u6781\u7B80\u4E3B\u4E49\u767D\u8272\u7ACB\u65B9\u4F53\uFF0C\u6BCF\u6761\u7EBF\u90FD\u7ECF\u8FC7\u8BA1\u7B97",s:{kubrick:3,wes:2,nolan:2,villeneuve:1}},{t:"\u6709\u70B9\u6B6A\u4F46\u5145\u6EE1\u751F\u6D3B\u6C14\u606F\u7684\u8001\u623F\u5B50",s:{fellini:3,gerwig:2,miyazaki:2,spielberg:1}},{t:"\u85CF\u5728\u5C71\u6797\u4E2D\u3001\u4E0E\u81EA\u7136\u878D\u4E3A\u4E00\u4F53\u7684\u6728\u5C4B",s:{miyazaki:3,tarkovsky:3,leeang:2,villeneuve:1}},{t:"\u5730\u4E0B\u5BA4\u6709\u79D8\u5BC6\u901A\u9053\u7684\u795E\u79D8\u5B85\u90B8",s:{lynch:3,hitchcock:2,nolan:2,bong:2}}]},
+{q:"\u5728\u4E00\u573A\u4E89\u8BBA\u4E2D\uFF0C\u4F60\u901A\u5E38\u4F1A\uFF1A",o:[{t:"\u7528\u51B7\u9759\u7684\u903B\u8F91\u548C\u6570\u636E\u78BE\u538B\u5BF9\u65B9",s:{kubrick:3,nolan:3,hitchcock:2,villeneuve:1}},{t:"\u7528\u4E00\u4E2A\u7EDD\u5999\u7684\u6BD4\u55BB\u6216\u6545\u4E8B\u8BA9\u5BF9\u65B9\u54D1\u53E3\u65E0\u8A00",s:{tarantino:3,coen:2,bong:2,spielberg:1}},{t:"\u503E\u542C\u5BF9\u65B9\uFF0C\u7136\u540E\u627E\u5230\u90FD\u80FD\u63A5\u53D7\u7684\u4E2D\u95F4\u5730\u5E26",s:{leeang:3,miyazaki:2,gerwig:2,spielberg:2}},{t:"\u8BF4\u4E00\u53E5\u610F\u5473\u6DF1\u957F\u7684\u8BDD\u7136\u540E\u8F6C\u8EAB\u79BB\u5F00",s:{wonkar:3,tarkovsky:2,lynch:2,wes:1}}]},
+{q:"\u4F60\u6700\u6B23\u8D4F\u7684\u8D85\u80FD\u529B\u662F\u4EC0\u4E48\uFF1F",o:[{t:"\u65F6\u95F4\u63A7\u5236\u2014\u2014\u6682\u505C\u3001\u5012\u6D41\u3001\u5FEB\u8FDB",s:{nolan:3,wonkar:3,tarkovsky:2,villeneuve:1}},{t:"\u8BFB\u5FC3\u672F\u2014\u2014\u6D1E\u6089\u6BCF\u4E2A\u4EBA\u7684\u771F\u5B9E\u60F3\u6CD5",s:{hitchcock:3,bong:2,lynch:2,kubrick:1}},{t:"\u98DE\u884C\u2014\u2014\u81EA\u7531\u5730\u7FD4\u7FD4\u5929\u9645",s:{miyazaki:3,spielberg:2,fellini:2,gerwig:1}},{t:"\u521B\u9020\u5E7B\u89C9\u2014\u2014\u8BA9\u522B\u4EBA\u770B\u89C1\u4F60\u60F3\u8BA9\u4ED6\u4EEC\u770B\u7684",s:{lynch:3,fellini:2,wes:2,kubrick:2}}]},
+{q:"\u4F60\u5FC3\u76EE\u4E2D\u5B8C\u7F8E\u7684\u665A\u9910\u662F\uFF1A",o:[{t:"\u4E00\u4E2A\u4EBA\u5728\u6DF1\u591C\u98DF\u5802\u5403\u4E00\u7897\u9762",s:{wonkar:3,tarkovsky:2,leeang:2,villeneuve:1}},{t:"\u548C\u4E00\u7FA4\u6709\u8DA3\u7684\u670B\u53CB\u559D\u9152\u804A\u5230\u5929\u4EAE",s:{tarantino:3,fellini:2,gerwig:2,coen:2}},{t:"\u7CBE\u5FC3\u51C6\u5907\u7684\u4E94\u9053\u5F0F\u6B63\u9910\uFF0C\u6446\u76D8\u5B8C\u7F8E",s:{wes:3,kubrick:2,hitchcock:2,nolan:1}},{t:"\u5728\u4E61\u6751\u91CE\u5916\u7684\u7BC0\u706B\u65C1\u70E4\u4E1C\u897F\u5403",s:{miyazaki:3,spielberg:2,leeang:1,tarkovsky:1}}]},
+{q:"\u9762\u5BF9\u4E00\u4E2A\u5DE8\u5927\u7684\u4E0D\u516C\u6B63\u4E8B\u4EF6\uFF0C\u4F60\u7684\u7B2C\u4E00\u53CD\u5E94\u662F\uFF1A",o:[{t:"\u6124\u6012\uFF0C\u60F3\u8981\u7ACB\u523B\u91C7\u53D6\u884C\u52A8\u6539\u53D8\u5B83",s:{bong:3,tarantino:2,spielberg:2,gerwig:2}},{t:"\u51B7\u9759\u5206\u6790\u6839\u6E90\uFF0C\u60F3\u51FA\u7CFB\u7EDF\u6027\u7684\u89E3\u51B3\u65B9\u6848",s:{kubrick:3,nolan:2,villeneuve:2,hitchcock:1}},{t:"\u6DF1\u611F\u60B2\u4F24\uFF0C\u7528\u827A\u672F\u6216\u6587\u5B57\u8868\u8FBE\u4F60\u7684\u611F\u53D7",s:{tarkovsky:3,wonkar:2,miyazaki:2,leeang:2}},{t:"\u82E6\u7B11\uFF0C\u628A\u5B83\u5199\u6210\u4E00\u4E2A\u8BD7\u523A\u6545\u4E8B",s:{coen:3,bong:2,fellini:2,tarantino:1}}]},
+{q:"\u4F60\u9009\u97F3\u4E50\u7684\u6807\u51C6\u6700\u63A5\u8FD1\uFF1A",o:[{t:"\u53E4\u5178\u4E50\u6216\u5B9E\u9A8C\u7535\u5B50\u2014\u2014\u7ED3\u6784\u611F\u548C\u672A\u6765\u611F",s:{kubrick:3,nolan:2,villeneuve:2,tarkovsky:1}},{t:"\u516D\u4E03\u5341\u5E74\u4EE3\u8001\u6B4C\u2014\u2014\u6709\u6545\u4E8B\u6709\u60C5\u6000",s:{tarantino:3,wonkar:2,spielberg:2,gerwig:1}},{t:"\u72EC\u7ACB\u6C11\u8C23\u6216\u4E16\u754C\u97F3\u4E50\u2014\u2014\u8D28\u6734\u800C\u771F\u631A",s:{miyazaki:2,leeang:3,gerwig:2,tarkovsky:2}},{t:"\u7235\u58EB\u6216\u610F\u5927\u5229\u6B4C\u5267\u2014\u2014\u534E\u4E3D\u53C8\u968F\u6027",s:{fellini:3,wes:2,coen:2,wonkar:1}}]},
+{q:"\u4F60\u5728\u56E2\u961F\u4E2D\u66F4\u63A5\u8FD1\u54EA\u4E2A\u89D2\u8272\uFF1F",o:[{t:"\u603B\u6307\u6325\u2014\u2014\u6240\u6709\u4E8B\u60C5\u5FC5\u987B\u6309\u6211\u7684\u6807\u51C6\u6765",s:{kubrick:3,hitchcock:2,wes:2,nolan:2}},{t:"\u70B9\u5B50\u738B\u2014\u2014\u4E0D\u65AD\u629B\u51FA\u65B0\u5947\u7684\u60F3\u6CD5",s:{tarantino:3,fellini:2,lynch:2,bong:1}},{t:"\u8C03\u548C\u8005\u2014\u2014\u8BA9\u6BCF\u4E2A\u4EBA\u90FD\u80FD\u53D1\u6325\u6700\u597D\u7684\u72B6\u6001",s:{spielberg:3,leeang:2,gerwig:2,miyazaki:1}},{t:"\u72EC\u884C\u4FA0\u2014\u2014\u6211\u66F4\u9002\u5408\u81EA\u5DF1\u5E72",s:{tarkovsky:3,wonkar:2,villeneuve:2,lynch:2}}]},
+{q:"\u4F60\u89C9\u5F97\u4EC0\u4E48\u6700\u80FD\u4EE3\u8868\u201C\u7F8E\u201D\uFF1F",o:[{t:"\u6570\u5B66\u822C\u7684\u7CBE\u786E\u5BF9\u79F0",s:{wes:3,kubrick:3,nolan:2,hitchcock:1}},{t:"\u4E00\u4E2A\u8F6C\u77AC\u5373\u901D\u7684\u81EA\u7136\u77AC\u95F4",s:{tarkovsky:3,miyazaki:2,wonkar:2,leeang:2}},{t:"\u6DF7\u4E71\u4E2D\u6D6E\u73B0\u7684\u610F\u5916\u79E9\u5E8F",s:{fellini:3,lynch:2,tarantino:2,coen:1}},{t:"\u4E00\u4E2A\u4EBA\u8138\u4E0A\u771F\u5B9E\u7684\u60C5\u611F\u8868\u8FBE",s:{spielberg:3,gerwig:2,leeang:2,bong:1}}]},
+{q:"\u5982\u679C\u4F60\u7A7F\u8D8A\u5230\u53E4\u4EE3\uFF0C\u4F60\u6700\u60F3\u505A\u4EC0\u4E48\uFF1F",o:[{t:"\u6210\u4E3A\u4E00\u4E2A\u5BAB\u5EF7\u8C0B\u7565\u5BB6",s:{hitchcock:3,kubrick:2,nolan:2,bong:1}},{t:"\u5F53\u4E00\u4E2A\u6E38\u541F\u8BD7\u4EBA\uFF0C\u56DB\u5904\u6F2B\u6E38\u5531\u6B4C",s:{fellini:3,wonkar:2,gerwig:2,tarkovsky:1}},{t:"\u9690\u5C45\u5C71\u6797\uFF0C\u4FEE\u884C\u609F\u9053",s:{tarkovsky:3,miyazaki:2,leeang:2,villeneuve:2}},{t:"\u5F53\u4E00\u4E2A\u4FA0\u5BA2\uFF0C\u52AB\u5BCC\u6D4E\u8D2B",s:{tarantino:3,bong:2,spielberg:2,miyazaki:1}}]},
+{q:"\u4F60\u6700\u5BB3\u6015\u7684\u4E8B\u60C5\u662F\uFF1A",o:[{t:"\u5931\u53BB\u5BF9\u751F\u6D3B\u7684\u638C\u63A7\u611F",s:{kubrick:3,nolan:2,wes:2,hitchcock:2}},{t:"\u88AB\u4EBA\u5F7B\u5E95\u9057\u5FD8",s:{wonkar:3,fellini:2,tarkovsky:2,villeneuve:1}},{t:"\u53D1\u73B0\u8FD9\u4E2A\u4E16\u754C\u6CA1\u6709\u4EFB\u4F55\u610F\u4E49",s:{tarkovsky:3,coen:2,kubrick:2,lynch:2}},{t:"\u4E0E\u4EB2\u5BC6\u7684\u4EBA\u5931\u53BB\u8FDE\u63A5",s:{miyazaki:3,spielberg:2,leeang:3,gerwig:2}}]},
+{q:"\u4F60\u5BF9\u201C\u89C4\u5219\u201D\u7684\u6001\u5EA6\u662F\uFF1A",o:[{t:"\u597D\u7684\u89C4\u5219\u662F\u6548\u7387\u7684\u4FDD\u969C\uFF0C\u6211\u5C0A\u91CD\u89C4\u5219",s:{nolan:3,spielberg:2,hitchcock:2,leeang:1}},{t:"\u89C4\u5219\u662F\u7528\u6765\u6253\u7834\u7684",s:{tarantino:3,lynch:2,fellini:2,bong:1}},{t:"\u6211\u6709\u81EA\u5DF1\u7684\u4E00\u5957\u89C4\u5219\uFF0C\u6BD4\u5176\u4ED6\u7684\u90FD\u597D",s:{kubrick:3,wes:3,wonkar:2,tarkovsky:1}},{t:"\u89C4\u5219\uFF1F\u90A3\u662F\u4EC0\u4E48\uFF1F\u6211\u8DDF\u7740\u611F\u89C9\u8D70",s:{fellini:3,gerwig:2,miyazaki:2,lynch:1}}]},
+{q:"\u4F60\u66F4\u559C\u6B22\u54EA\u79CD\u53D9\u4E8B\u65B9\u5F0F\uFF1F",o:[{t:"\u975E\u7EBF\u6027\u53D9\u4E8B\uFF0C\u65F6\u95F4\u788E\u7247\u62FC\u63A5",s:{nolan:3,tarantino:2,wonkar:2,lynch:2}},{t:"\u7ECF\u5178\u4E09\u5E55\u5F0F\uFF0C\u8D77\u627F\u8F6C\u5408",s:{spielberg:3,hitchcock:2,leeang:2,gerwig:1}},{t:"\u610F\u8BC6\u6D41\uFF0C\u8DDF\u7740\u60C5\u7EEA\u8D70",s:{tarkovsky:3,fellini:2,wonkar:2,lynch:2}},{t:"\u591A\u7EBF\u5E76\u884C\uFF0C\u6700\u7EC8\u4EA4\u6C47",s:{bong:3,coen:2,nolan:2,tarantino:2}}]},
+{q:"\u4F60\u8BA4\u4E3A\u7535\u5F71\u6700\u91CD\u8981\u7684\u5143\u7D20\u662F\uFF1A",o:[{t:"\u753B\u9762\u6784\u56FE\u548C\u5149\u5F71",s:{kubrick:3,wonkar:2,wes:2,villeneuve:2,tarkovsky:2}},{t:"\u5267\u672C\u548C\u5BF9\u8BDD",s:{tarantino:3,coen:2,hitchcock:2,nolan:2}},{t:"\u6F14\u5458\u7684\u8868\u6F14",s:{leeang:3,gerwig:2,spielberg:2,fellini:1}},{t:"\u6C14\u6C1B\u548C\u60C5\u7EEA",s:{lynch:3,tarkovsky:2,wonkar:2,villeneuve:2}}]},
+{q:"\u4F60\u7684\u68A6\u5883\u901A\u5E38\u662F\u4EC0\u4E48\u6837\u7684\uFF1F",o:[{t:"\u8BE1\u5F02\u4F46\u8FF7\u4EBA\uFF0C\u9192\u6765\u540E\u60F3\u8BB0\u4E0B\u6765",s:{lynch:3,fellini:2,tarkovsky:2,miyazaki:1}},{t:"\u50CF\u4E00\u90E8\u52A8\u4F5C\u7247\uFF0C\u523A\u6FC0\u7D27\u5F20",s:{tarantino:3,spielberg:2,nolan:2,bong:1}},{t:"\u6E29\u6696\u800C\u6709\u4E9B\u4F24\u611F\uFF0C\u5145\u6EE1\u8001\u5730\u65B9\u548C\u65E7\u4EBA",s:{wonkar:3,miyazaki:2,leeang:2,gerwig:2}},{t:"\u6781\u5176\u6E05\u6670\uFF0C\u50CF\u5EFA\u7B51\u84DD\u56FE\u4E00\u6837\u6709\u903B\u8F91",s:{nolan:3,kubrick:2,wes:2,hitchcock:1}}]},
+{q:"\u4F60\u5982\u4F55\u770B\u5F85\u66B4\u529B\uFF1F",o:[{t:"\u5B83\u53EF\u4EE5\u662F\u4E00\u79CD\u827A\u672F\u5F62\u5F0F\u548C\u7F8E\u5B66\u8868\u8FBE",s:{tarantino:3,kubrick:2,bong:1,hitchcock:1}},{t:"\u5B83\u63ED\u793A\u4E86\u4EBA\u6027\u6700\u9ED1\u6697\u4E5F\u6700\u771F\u5B9E\u7684\u4E00\u9762",s:{coen:3,bong:2,kubrick:2,villeneuve:1}},{t:"\u5B83\u6C38\u8FDC\u4E0D\u5E94\u8BE5\u88AB\u7F8E\u5316",s:{miyazaki:3,tarkovsky:2,leeang:2,gerwig:2}},{t:"\u5B83\u5728\u6B63\u786E\u7684\u53D9\u4E8B\u4E2D\u662F\u5FC5\u8981\u7684\u5DE5\u5177",s:{spielberg:2,nolan:2,hitchcock:3,villeneuve:2}}]},
+{q:"\u5982\u679C\u6709\u4EBA\u6279\u8BC4\u4F60\u7684\u4F5C\u54C1\uFF0C\u4F60\u4F1A\uFF1A",o:[{t:"\u5B8C\u5168\u4E0D\u5728\u4E4E\uFF0C\u6211\u76F8\u4FE1\u81EA\u5DF1\u7684\u5224\u65AD",s:{kubrick:3,tarkovsky:2,lynch:2,wonkar:2}},{t:"\u8BA4\u771F\u542C\u53D6\uFF0C\u7136\u540E\u51B3\u5B9A\u662F\u5426\u91C7\u7EB3",s:{spielberg:3,leeang:2,nolan:2,gerwig:1}},{t:"\u8868\u9762\u4E0D\u5728\u610F\uFF0C\u5185\u5FC3\u6697\u81EA\u8F83\u52B2\u8981\u505A\u5F97\u66F4\u597D",s:{hitchcock:3,wes:2,bong:2,villeneuve:2}},{t:"\u7528\u4E00\u4E2A\u66F4\u5927\u80C6\u7684\u4F5C\u54C1\u56DE\u51FB\u4ED6\u4EEC",s:{tarantino:3,fellini:2,lynch:2,coen:1}}]},
+{q:"\u4F60\u6700\u5411\u5F80\u7684\u65C5\u884C\u76EE\u7684\u5730\u662F\uFF1A",o:[{t:"\u4E1C\u4EAC\u2014\u2014\u79E9\u5E8F\u4E0E\u6DF7\u6C8C\u7684\u5B8C\u7F8E\u7ED3\u5408",s:{kubrick:2,wes:2,miyazaki:2,wonkar:2}},{t:"\u51B0\u5C9B\u2014\u2014\u8352\u51C9\u3001\u539F\u59CB\u3001\u8D85\u51E1\u8131\u4FD7",s:{tarkovsky:3,villeneuve:3,nolan:1,lynch:1}},{t:"\u7F57\u9A6C\u2014\u2014\u5386\u53F2\u3001\u7F8E\u98DF\u3001\u751C\u871C\u7684\u6DF7\u4E71",s:{fellini:3,gerwig:2,spielberg:1,tarantino:1}},{t:"\u7F8E\u56FD\u5357\u90E8\u5C0F\u9547\u2014\u2014\u9690\u79D8\u6545\u4E8B\u65E0\u5904\u4E0D\u5728",s:{coen:3,lynch:2,tarantino:2,bong:1}}]},
+{q:"\u4F60\u5BF9\u5F85\u7AE5\u5E74\u56DE\u5FC6\u7684\u65B9\u5F0F\u662F\uFF1A",o:[{t:"\u7AE5\u5E74\u662F\u521B\u4F5C\u7075\u611F\u7684\u6C38\u6052\u6E90\u6CC9",s:{spielberg:3,miyazaki:3,fellini:2,gerwig:1}},{t:"\u7AE5\u5E74\u662F\u6211\u9700\u8981\u7406\u89E3\u548C\u8D85\u8D8A\u7684\u4E1C\u897F",s:{nolan:2,kubrick:2,leeang:3,bong:2}},{t:"\u7AE5\u5E74\uFF1F\u6211\u6D3B\u5728\u5F53\u4E0B\u548C\u672A\u6765",s:{tarantino:2,villeneuve:2,nolan:2,wes:1}},{t:"\u7AE5\u5E74\u7684\u5F71\u50CF\u5E38\u5E38\u4E0D\u8BF7\u81EA\u6765\uFF0C\u5E26\u7740\u5FE7\u4F24",s:{wonkar:3,tarkovsky:3,lynch:2,leeang:1}}]},
+{q:"\u4F60\u66F4\u8BA4\u540C\u54EA\u79CD\u7231\u60C5\u89C2\uFF1F",o:[{t:"\u7231\u60C5\u662F\u4E24\u4E2A\u7075\u9B42\u7684\u6DF1\u5EA6\u5171\u632F",s:{tarkovsky:3,leeang:2,wonkar:2,villeneuve:1}},{t:"\u7231\u60C5\u662F\u6CE8\u5B9A\u9519\u8FC7\u7684\u7F8E\u4E3D\u9057\u61BE",s:{wonkar:3,leeang:2,gerwig:2,fellini:1}},{t:"\u7231\u60C5\u662F\u6DF7\u4E71\u7684\u3001\u75AF\u72C2\u7684\u3001\u4E0D\u53EF\u7406\u55BB\u7684",s:{fellini:3,tarantino:2,lynch:2,coen:1}},{t:"\u7231\u60C5\u662F\u6E29\u6696\u800C\u6301\u4E45\u7684\u65E5\u5E38\u966A\u4F34",s:{miyazaki:3,spielberg:2,gerwig:2,leeang:1}}]},
+{q:"\u4F60\u5904\u7406\u538B\u529B\u7684\u65B9\u5F0F\u662F\uFF1A",o:[{t:"\u628A\u4E00\u5207\u62C6\u89E3\u6210\u53EF\u7BA1\u7406\u7684\u5C0F\u4EFB\u52A1",s:{nolan:3,kubrick:2,hitchcock:2,wes:1}},{t:"\u8FD0\u52A8\u3001\u6563\u6B65\u6216\u505A\u624B\u5DE5\u6765\u5E73\u9759\u5185\u5FC3",s:{miyazaki:3,leeang:2,gerwig:2,villeneuve:1}},{t:"\u627E\u670B\u53CB\u5410\u69FD\u6216\u770B\u559C\u5267\u7535\u5F71",s:{tarantino:2,gerwig:3,fellini:2,coen:2}},{t:"\u6C89\u6D78\u5728\u97F3\u4E50\u6216\u827A\u672F\u4E2D\u6682\u65F6\u9003\u79BB",s:{wonkar:3,tarkovsky:2,lynch:2,wes:2}}]},
+{q:"\u4F60\u5E0C\u671B\u522B\u4EBA\u600E\u4E48\u5F62\u5BB9\u4F60\uFF1F",o:[{t:"\u5929\u624D\u2014\u2014\u4E0D\u53EF\u601D\u8BAE\u5730\u806A\u660E",s:{kubrick:3,nolan:2,hitchcock:2,tarantino:1}},{t:"\u6E29\u6696\u2014\u2014\u50CF\u4E00\u4E2A\u53EF\u4EE5\u4F9D\u9760\u7684\u670B\u53CB",s:{miyazaki:3,spielberg:2,gerwig:2,leeang:2}},{t:"\u72EC\u7279\u2014\u2014\u548C\u4EFB\u4F55\u4EBA\u90FD\u4E0D\u4E00\u6837",s:{lynch:3,wes:2,tarkovsky:2,fellini:2}},{t:"\u72AC\u5229\u2014\u2014\u603B\u80FD\u4E00\u9488\u89C1\u8840\u5730\u6307\u51FA\u95EE\u9898",s:{bong:3,coen:2,kubrick:1,tarantino:2}}]},
+{q:"\u5982\u679C\u4F60\u6765\u5199\u4E00\u4E2A\u5173\u4E8E\u666E\u901A\u4E0A\u73ED\u65CF\u7684\u6545\u4E8B\uFF0C\u4F60\u4F1A\u600E\u4E48\u5199\uFF1F",o:[{t:"\u63ED\u793A\u4ED6\u770B\u4F3C\u5E73\u51E1\u751F\u6D3B\u4E0B\u7684\u9636\u5C42\u56F0\u5883",s:{bong:3,coen:2,kubrick:1,lynch:1}},{t:"\u8BA9\u4ED6\u5377\u5165\u4E00\u573A\u610F\u60F3\u4E0D\u5230\u7684\u5192\u9669",s:{spielberg:3,hitchcock:2,nolan:2,tarantino:1}},{t:"\u7EC6\u817B\u5730\u63CF\u7ED8\u4ED6\u7684\u65E5\u5E38\uFF0C\u8BA9\u5E73\u51E1\u53D1\u5149",s:{gerwig:3,leeang:2,miyazaki:2,wonkar:1}},{t:"\u628A\u4ED6\u7684\u5185\u5FC3\u4E16\u754C\u53D8\u6210\u4E00\u573A\u8D85\u73B0\u5B9E\u4E4B\u65C5",s:{lynch:3,fellini:3,tarkovsky:2,wonkar:1}}]},
+{q:"\u4F60\u5BF9\u79D1\u6280\u7684\u6001\u5EA6\u66F4\u63A5\u8FD1\uFF1A",o:[{t:"\u79D1\u6280\u662F\u4EBA\u7C7B\u7406\u6027\u7684\u5DC5\u5CF0\u4F53\u73B0",s:{nolan:3,kubrick:2,villeneuve:2,hitchcock:1}},{t:"\u79D1\u6280\u8BA9\u6211\u4EEC\u5931\u53BB\u4E86\u67D0\u4E9B\u73CD\u8D35\u7684\u4E1C\u897F",s:{miyazaki:3,tarkovsky:2,leeang:2,wonkar:1}},{t:"\u79D1\u6280\u662F\u8BB2\u597D\u6545\u4E8B\u7684\u65B0\u5DE5\u5177",s:{spielberg:3,bong:2,wes:1,gerwig:1}},{t:"\u6211\u5BF9\u79D1\u6280\u4E0D\u592A\u611F\u5174\u8DA3\uFF0C\u66F4\u5173\u5FC3\u4EBA\u672C\u8EAB",s:{fellini:2,gerwig:2,tarantino:3,coen:2}}]},
+{q:"\u4F60\u66F4\u559C\u6B22\u5728\u4EC0\u4E48\u65F6\u95F4\u6BB5\u5DE5\u4F5C\uFF1F",o:[{t:"\u6DF1\u591C\u2014\u2014\u5B89\u9759\u3001\u4E13\u6CE8\u3001\u7075\u611F\u6D8C\u73B0",s:{wonkar:3,lynch:2,tarkovsky:2,kubrick:2}},{t:"\u6E05\u6668\u2014\u2014\u5934\u8111\u6E05\u9192\u3001\u6548\u7387\u6700\u9AD8",s:{nolan:3,kubrick:2,hitchcock:2,villeneuve:1}},{t:"\u4E0B\u5348\u2014\u2014\u548C\u56E2\u961F\u5728\u4E00\u8D77\u7684\u65F6\u5019",s:{spielberg:3,gerwig:2,leeang:2,miyazaki:1}},{t:"\u4EC0\u4E48\u65F6\u5019\u7075\u611F\u6765\u4EC0\u4E48\u65F6\u5019\u5DE5\u4F5C",s:{tarantino:3,fellini:2,coen:2,lynch:1}}]},
+{q:"\u4F60\u5BF9\u201C\u5546\u4E1A\u6210\u529F\u201D\u7684\u770B\u6CD5\u662F\uFF1A",o:[{t:"\u5B83\u662F\u9A8C\u8BC1\u4F5C\u54C1\u4EF7\u503C\u7684\u91CD\u8981\u6307\u6807\u4E4B\u4E00",s:{spielberg:3,nolan:2,hitchcock:2,bong:1}},{t:"\u5982\u679C\u80FD\u517C\u987E\u5F53\u7136\u597D\uFF0C\u4F46\u7EDD\u4E0D\u59A5\u534F\u827A\u672F",s:{kubrick:3,villeneuve:2,wes:2,tarkovsky:1}},{t:"\u5546\u4E1A\u548C\u827A\u672F\u53EF\u4EE5\u5B8C\u7F8E\u878D\u5408\uFF0C\u770B\u4F60\u4F1A\u4E0D\u4F1A",s:{bong:3,hitchcock:2,tarantino:2,nolan:1}},{t:"\u6211\u6839\u672C\u4E0D\u8003\u8651\u8FD9\u4E2A\u95EE\u9898",s:{tarkovsky:3,lynch:2,wonkar:2,fellini:2}}]},
+{q:"\u4F60\u89C9\u5F97\u54EA\u79CD\u52A8\u7269\u6700\u80FD\u4EE3\u8868\u4F60\uFF1F",o:[{t:"\u732B\u2014\u2014\u72EC\u7ACB\u3001\u795E\u79D8\u3001\u4F18\u96C5",s:{wonkar:3,hitchcock:2,kubrick:2,wes:1}},{t:"\u72D7\u2014\u2014\u5FE0\u8BDA\u3001\u70ED\u60C5\u3001\u5584\u826F",s:{miyazaki:3,spielberg:2,gerwig:2,leeang:1}},{t:"\u4E4C\u9E26\u2014\u2014\u806A\u660E\u3001\u53DB\u9006\u3001\u6709\u70B9\u6697\u9ED1",s:{lynch:3,coen:2,tarantino:2,bong:1}},{t:"\u9E70\u2014\u2014\u89C6\u91CE\u5BBD\u5E7F\u3001\u72EC\u6765\u72EC\u5F80",s:{tarkovsky:3,villeneuve:2,nolan:2,kubrick:1}}]},
+{q:"\u4F60\u6700\u4E0D\u80FD\u5FCD\u53D7\u7684\u4E8B\u60C5\u662F\uFF1A",o:[{t:"\u5E73\u5EB8\u2014\u2014\u6CA1\u6709\u8FFD\u6C42\u6CA1\u6709\u6807\u51C6",s:{kubrick:3,wes:2,tarkovsky:2,villeneuve:1}},{t:"\u865A\u4F2A\u2014\u2014\u8868\u91CC\u4E0D\u4E00\u3001\u81EA\u6B3A\u6B3A\u4EBA",s:{bong:3,coen:2,tarantino:2,lynch:1}},{t:"\u6B8B\u5FCD\u2014\u2014\u5BF9\u5F31\u8005\u7684\u6F20\u89C6\u548C\u4F24\u5BB3",s:{miyazaki:3,spielberg:2,leeang:2,gerwig:2}},{t:"\u65E0\u804A\u2014\u2014\u53EF\u9884\u6D4B\u7684\u3001\u91CD\u590D\u7684\u751F\u6D3B",s:{tarantino:3,fellini:3,lynch:1,wonkar:1}}]},
+{q:"\u4F60\u5728\u770B\u4E00\u90E8\u7535\u5F71\u65F6\uFF0C\u6700\u4EAB\u53D7\u7684\u65F6\u523B\u662F\uFF1A",o:[{t:"\u4E00\u4E2A\u6784\u56FE\u5B8C\u7F8E\u7684\u753B\u9762\u8BA9\u4F60\u5C4F\u4F4F\u547C\u5438",s:{kubrick:3,wes:2,wonkar:2,villeneuve:2}},{t:"\u4E00\u6BB5\u5BF9\u8BDD\u673A\u950B\u8BA9\u4F60\u62CD\u6848\u53EB\u7EDD",s:{tarantino:3,coen:2,hitchcock:2,bong:1}},{t:"\u4E00\u4E2A\u60C5\u611F\u7206\u53D1\u70B9\u8BA9\u4F60\u6CEA\u6D41\u6EE1\u9762",s:{spielberg:3,leeang:2,miyazaki:2,gerwig:2}},{t:"\u6574\u90E8\u7247\u7ED3\u675F\u540E\u4E45\u4E45\u56DE\u4E0D\u8FC7\u795E\u6765\u7684\u611F\u89C9",s:{tarkovsky:3,lynch:2,nolan:2,wonkar:2}}]},
+{q:"\u5982\u679C\u4F60\u5FC5\u987B\u6C38\u8FDC\u6D3B\u5728\u4E00\u4E2A\u7535\u5F71\u7C7B\u578B\u91CC\uFF0C\u4F60\u9009\uFF1A",o:[{t:"\u79D1\u5E7B\u2014\u2014\u65E0\u9650\u53EF\u80FD\u7684\u672A\u6765",s:{nolan:3,kubrick:2,villeneuve:3,tarkovsky:1}},{t:"\u9ED1\u8272\u559C\u5267\u2014\u2014\u8352\u8BDE\u5374\u771F\u5B9E",s:{coen:3,bong:2,tarantino:2,fellini:1}},{t:"\u5947\u5E7B\u5192\u9669\u2014\u2014\u5145\u6EE1\u9B54\u6CD5\u548C\u52C7\u6C14",s:{miyazaki:3,spielberg:2,fellini:1,gerwig:1}},{t:"\u6587\u827A\u7231\u60C5\u2014\u2014\u7EC6\u817B\u7684\u4EBA\u95F4\u6545\u4E8B",s:{wonkar:3,leeang:2,gerwig:2,tarkovsky:1}}]},
+{q:"\u4F60\u8BA4\u4E3A\u201C\u5929\u8D4B\u201D\u548C\u201C\u52AA\u529B\u201D\u54EA\u4E2A\u66F4\u91CD\u8981\uFF1F",o:[{t:"\u5929\u8D4B\u662F\u57FA\u7840\uFF0C\u4F46\u6781\u81F4\u7684\u52AA\u529B\u8BA9\u5929\u8D4B\u95EA\u5149",s:{kubrick:3,miyazaki:2,nolan:2,wes:2}},{t:"\u5929\u8D4B\u51B3\u5B9A\u65B9\u5411\uFF0C\u76F4\u89C9\u6BD4\u52AA\u529B\u66F4\u91CD\u8981",s:{tarantino:3,lynch:2,fellini:2,wonkar:1}},{t:"\u771F\u8BDA\u548C\u70ED\u60C5\u6BD4\u5929\u8D4B\u548C\u52AA\u529B\u90FD\u91CD\u8981",s:{gerwig:3,spielberg:2,leeang:2,miyazaki:1}},{t:"\u624D\u534E\u53EA\u662F\u5DE5\u5177\uFF0C\u6D1E\u5BDF\u529B\u624D\u662F\u5173\u952E",s:{bong:3,coen:2,hitchcock:2,tarkovsky:2}}]},
+{q:"\u4F60\u5BF9\u201C\u5B64\u72EC\u201D\u7684\u7406\u89E3\u662F\uFF1A",o:[{t:"\u5B64\u72EC\u662F\u521B\u4F5C\u8005\u7684\u5FC5\u8981\u6761\u4EF6",s:{tarkovsky:3,kubrick:2,wonkar:2,villeneuve:2}},{t:"\u5B64\u72EC\u662F\u9700\u8981\u88AB\u6253\u7834\u548C\u6CBB\u6108\u7684\u4E1C\u897F",s:{spielberg:3,miyazaki:2,gerwig:2,leeang:1}},{t:"\u5B64\u72EC\u6709\u4E00\u79CD\u7F8E\u611F\uFF0C\u4F46\u592A\u591A\u4E86\u4F1A\u6BC1\u4EBA",s:{wonkar:3,fellini:2,leeang:2,wes:1}},{t:"\u6211\u4E0D\u592A\u7406\u89E3\u5B64\u72EC\uFF0C\u6211\u603B\u80FD\u627E\u5230\u4E50\u5B50",s:{tarantino:3,fellini:2,coen:2,bong:1}}]},
+{q:"\u4F60\u66F4\u5728\u610F\u4E00\u90E8\u4F5C\u54C1\u7684\uFF1A",o:[{t:"\u5F62\u5F0F\u2014\u2014\u5B83\u770B\u8D77\u6765/\u542C\u8D77\u6765/\u611F\u89C9\u8D77\u6765\u5982\u4F55",s:{wes:3,kubrick:2,wonkar:2,tarkovsky:2}},{t:"\u5185\u5BB9\u2014\u2014\u5B83\u8BF4\u4E86\u4EC0\u4E48\u3001\u8868\u8FBE\u4E86\u4EC0\u4E48\u7ACB\u573A",s:{bong:3,spielberg:2,gerwig:2,miyazaki:1}},{t:"\u4F53\u9A8C\u2014\u2014\u5B83\u7ED9\u89C2\u4F17\u5E26\u6765\u4E86\u4EC0\u4E48\u611F\u53D7",s:{hitchcock:3,nolan:2,lynch:2,spielberg:1}},{t:"\u4EE5\u4E0A\u90FD\u91CD\u8981\uFF0C\u4E0D\u53EF\u5206\u5272",s:{leeang:3,villeneuve:2,kubrick:1,fellini:2}}]}
+];
+
+var qs=[],ci=0,ans=[],busy=false;
+function shuffle(a){var b=[].concat(a);for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t}return b}
+function $(id){return document.getElementById(id)}
+function show(id){document.querySelectorAll('.scr').forEach(function(s){s.classList.remove('on')});$(id).classList.add('on');window.scrollTo(0,0)}
+function toast(m){var t=$('tst');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2400)}
+
+function start(){qs=shuffle(Q);ci=0;ans=[];busy=false;render();show('s-quiz')}
+
+function render(){
+  var q=qs[ci],tot=qs.length,pct=(ci/tot)*100;
+  $('qf').style.width=pct+'%';
+  $('qn').textContent=(ci+1)+' / '+tot;
+  var txt=$('qt');txt.textContent=q.q;txt.className='qt anim-sm';
+  var box=$('qo');box.innerHTML='';box.className='qo anim-sm2';
+  var L=['A','B','C','D'];
+  q.o.forEach(function(opt,i){
+    var b=document.createElement('button');b.className='qx';
+    b.innerHTML='<span class="le">'+L[i]+'.</span>'+opt.t;
+    b.addEventListener('click',function(e){e.preventDefault();pick(b,opt)});
+    box.appendChild(b);
+  });
+}
+
+function pick(btn,opt){
+  if(busy)return;busy=true;
+  document.querySelectorAll('.qx').forEach(function(b){b.classList.add('off')});
+  btn.classList.remove('off');btn.classList.add('sel');
+  ans.push(opt.s);
+  setTimeout(function(){
+    if(ci<qs.length-1){ci++;render();busy=false}
+    else{result()}
+  },400);
+}
+
+function result(){
+  var sc={};Object.keys(D).forEach(function(k){sc[k]=0});
+  ans.forEach(function(a){Object.keys(a).forEach(function(k){if(sc[k]!==undefined)sc[k]+=a[k]})});
+  var sorted=Object.entries(sc).sort(function(a,b){return b[1]-a[1]});
+  var wk=sorted[0][0],dir=D[wk];
+  var total=0;Object.values(sc).forEach(function(v){total+=v});if(!total)total=1;
+  var traits={};Object.keys(TL).forEach(function(t){traits[t]=0});
+  Object.keys(sc).forEach(function(dk){var w=sc[dk]/total;Object.keys(D[dk].tr).forEach(function(t){traits[t]+=D[dk].tr[t]*w})});
+  var top3=sorted.slice(0,3),mx=top3[0][1];
+  var rs=$('s-result');
+  rs.style.background='linear-gradient(175deg,'+dir.col+' 0%,#07060b 45%,'+dir.col+'44 100%)';
+  var h='<div class="rh"><p class="rl" style="color:'+dir.ac+'">YOUR DIRECTOR PERSONALITY</p>';
+  h+='<div class="re" style="filter:drop-shadow(0 0 24px '+dir.ac+'40)">'+dir.emoji+'</div>';
+  h+='<h1 class="rn">'+dir.name+'</h1><p class="rne">'+dir.en+'</p></div>';
+  h+='<div class="rk">';dir.kw.forEach(function(k){h+='<span class="rkw" style="color:'+dir.ac+';border-color:'+dir.ac+'40">'+k+'</span>'});h+='</div>';
+  h+='<div class="rc"><p class="rdt">'+dir.desc+'</p><p class="rwk">\u4EE3\u8868\u4F5C\uFF1A'+dir.wk+'</p></div>';
+  h+='<div class="rr"><p class="rsl">\u4F60 \u7684 \u521B \u4F5C \u4EBA \u683C \u56FE \u8C31</p>'+radar(traits,dir.ac)+'</div>';
+  h+='<div class="rts">';
+  Object.keys(traits).forEach(function(k){var v=traits[k];
+    h+='<div class="rt"><div class="rti"><span class="rtn">'+TL[k]+'</span><span class="rtv" style="color:'+dir.ac+'">'+Math.round(v)+'</span></div>';
+    h+='<div class="rtk"><div class="rtf" style="width:0;background:linear-gradient(90deg,'+dir.ac+'80,'+dir.ac+')" data-w="'+v+'%"></div></div></div>'});
+  h+='</div>';
+  h+='<div class="r3s"><p class="rsl">\u6700 \u5339 \u914D  T O P  3</p>';
+  top3.forEach(function(item,i){var dk=item[0],s=item[1],d=D[dk],p=Math.round((s/mx)*100);
+    h+='<div class="r3"><span class="r3e">'+d.emoji+'</span><div class="r3r"><div class="r3m"><span class="r3n" style="color:'+(i===0?'#ede4d3':'#9e9282')+';font-weight:'+(i===0?'600':'400')+'">'+d.name+'</span>';
+    h+='<span class="r3p">'+p+'%</span></div><div class="r3b"><div class="r3f" style="width:0;background:'+(i===0?dir.ac:'#5c5448')+'" data-w="'+p+'%"></div></div></div></div>'});
+  h+='</div>';
+  h+='<div class="ra"><button class="rbsh" id="bsh" style="background:'+dir.ac+';color:#07060b">\u5206 \u4EAB \u7ED3 \u679C</button>';
+  h+='<button class="rbre" id="bre">\u91CD \u65B0 \u6D4B \u8BD5</button></div>';
+  h+='<p class="rfo">DIRECTOR PERSONALITY TEST \u00B7 \u5BFC\u6F14\u4EBA\u683C\u6D4B\u8BD5</p>';
+  $('rw').innerHTML=h;$('rw').className='rw anim-up';
+  show('s-result');
+  $('bsh').addEventListener('click',function(e){e.preventDefault();share(dir)});
+  $('bre').addEventListener('click',function(e){e.preventDefault();start()});
+  requestAnimationFrame(function(){setTimeout(function(){document.querySelectorAll('.rtf,.r3f').forEach(function(el){el.style.width=el.dataset.w})},250)});
+}
+
+function share(dir){
+  var txt='\u{1F3AC} \u6211\u505A\u4E86\u300C\u4F60\u7684\u7075\u9B42\u50CF\u54EA\u4F4D\u5BFC\u6F14\u300D\u4EBA\u683C\u6D4B\u8BD5\uFF0C\u6211\u7684\u7ED3\u679C\u662F\u2014\u2014'+dir.name+'\uFF08'+dir.en+'\uFF09\uFF01'+dir.kw.join(' \u00B7 ')+'\u3002\u6765\u6D4B\u6D4B\u4F60\u50CF\u54EA\u4F4D\u5BFC\u6F14\u5427\uFF01';
+  if(navigator.share){navigator.share({title:'\u7535\u5F71\u5BFC\u6F14\u4EBA\u683C\u6D4B\u8BD5',text:txt}).catch(function(){})}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast('\u2713 \u5DF2\u590D\u5236\u5230\u526A\u8D34\u677F')}).catch(function(){fc(txt)})}
+  else{fc(txt)}
+}
+function fc(txt){var ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;left:-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('\u2713 \u5DF2\u590D\u5236\u5230\u526A\u8D34\u677F')}catch(e){prompt('\u590D\u5236\u4EE5\u4E0B\u6587\u5B57\u5206\u4EAB\uFF1A',txt)}document.body.removeChild(ta)}
+
+function radar(traits,ac){
+  var keys=Object.keys(traits),vals=Object.values(traits),n=keys.length,cx=150,cy=150,r=105;
+  function pt(i,v){var a=Math.PI*2*i/n-Math.PI/2;return[cx+r*(v/100)*Math.cos(a),cy+r*(v/100)*Math.sin(a)]}
+  var s='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">';
+  [.25,.5,.75,1].forEach(function(l){var d='';for(var i=0;i<n;i++){var p=pt(i,l*100);d+=(i?'L':'M')+p[0]+' '+p[1]+' '}d+='Z';s+='<path d="'+d+'" fill="none" stroke="rgba(237,228,211,.07)" stroke-width="1"/>'});
+  for(var i=0;i<n;i++){var p=pt(i,100);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0]+'" y2="'+p[1]+'" stroke="rgba(237,228,211,.05)" stroke-width="1"/>'}
+  var d='',pts=[];vals.forEach(function(v,i){var p=pt(i,v);pts.push(p);d+=(i?'L':'M')+p[0]+' '+p[1]+' '});d+='Z';
+  s+='<path d="'+d+'" fill="'+ac+'20" stroke="'+ac+'" stroke-width="2"/>';
+  pts.forEach(function(p){s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.5" fill="'+ac+'"/>'});
+  keys.forEach(function(k,i){var p=pt(i,122);s+='<text x="'+p[0]+'" y="'+p[1]+'" text-anchor="middle" dominant-baseline="central" fill="#9e9282" font-size="10.5" font-family="Noto Serif SC,serif">'+TL[k]+'</text>'});
+  return s+'</svg>'}
+
+document.addEventListener('DOMContentLoaded',function(){$('go').addEventListener('click',function(e){e.preventDefault();start()})});
+</script>
+</body>
+</html>
