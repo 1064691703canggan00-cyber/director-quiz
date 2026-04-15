@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>你的灵魂像哪位导演 · Director Personality Test</title>
+<meta name="description" content="20道脑洞题，21位传奇导演，找到属于你的电影人格。">
+<meta property="og:title" content="你的灵魂像哪位导演 · 导演人格测试">
+<meta property="og:description" content="20道脑洞大开的问题，21位传奇导演的灵魂等待与你相遇。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07060b;--t1:#ede4d3;--t2:#9e9282;--t3:#5c5448;--red:#d4405a;--gold:#c9a84c}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{font-family:'Noto Serif SC','Songti SC',Georgia,serif;background:var(--bg);color:var(--t1);min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:'';position:fixed;inset:0;opacity:.03;pointer-events:none;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.scr{display:none;min-height:100vh;min-height:100dvh;flex-direction:column}.scr.on{display:flex}
+@keyframes up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes upSm{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.anim-up{animation:up .9s cubic-bezier(.22,1,.36,1) both}
+.anim-sm{animation:upSm .45s cubic-bezier(.22,1,.36,1) both}
+.anim-sm2{animation:upSm .5s cubic-bezier(.22,1,.36,1) .06s both}
+#s-start{align-items:center;justify-content:center;text-align:center;padding:48px 24px;position:relative;background:linear-gradient(175deg,#0a0810 0%,#100d18 35%,#160a16 65%,#0a0810 100%)}
+.sg{position:absolute;border-radius:50%;filter:blur(100px);opacity:.07;pointer-events:none}
+.sg.a{top:-10%;left:40%;width:500px;height:500px;background:var(--red)}
+.sg.b{bottom:5%;right:20%;width:300px;height:300px;background:var(--gold)}
+.sw{position:relative;z-index:2;max-width:480px}
+.si{font-size:56px;margin-bottom:12px;display:inline-block;animation:drift 4s ease-in-out infinite}
+.st{font-size:clamp(26px,7vw,40px);font-weight:700;letter-spacing:5px;line-height:1.4;margin-bottom:8px;background:linear-gradient(135deg,var(--t1),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ss{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--t3);letter-spacing:5px;margin-bottom:40px}
+.sd{font-size:15px;color:var(--t2);line-height:2.2;margin-bottom:48px}
+.sb{display:inline-block;background:0 0;border:1px solid rgba(237,228,211,.2);color:var(--t1);padding:17px 60px;font-size:15px;font-family:inherit;letter-spacing:5px;cursor:pointer;transition:all .5s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.sb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--red),var(--gold));opacity:0;transition:opacity .5s}
+.sb:hover,.sb:active{border-color:transparent;letter-spacing:8px;transform:scale(1.02)}
+.sb:hover::before,.sb:active::before{opacity:.12}
+.sb span{position:relative;z-index:1}
+.sm{color:var(--t3);font-size:12px;margin-top:32px;letter-spacing:2px;font-family:'Courier New',monospace}
+#s-quiz{background:linear-gradient(175deg,#0a0810,#0e0c14)}
+.qh{padding:16px 20px 14px;position:sticky;top:0;z-index:10;background:rgba(10,8,16,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(237,228,211,.04)}
+.qp{display:flex;align-items:center;gap:12px}
+.qb{flex:1;height:2px;background:rgba(237,228,211,.07);border-radius:1px;overflow:hidden}
+.qf{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .6s cubic-bezier(.22,1,.36,1);border-radius:1px}
+.qn{color:var(--t3);font-size:12px;font-family:'Courier New',monospace;min-width:50px;text-align:right}
+.qy{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 18px 48px;max-width:600px;margin:0 auto;width:100%}
+.qt{font-size:clamp(16px,4.2vw,20px);font-weight:600;text-align:center;line-height:1.8;margin-bottom:32px;color:var(--t1)}
+.qo{width:100%;display:flex;flex-direction:column;gap:10px}
+.qx{display:block;width:100%;background:rgba(237,228,211,.025);border:1px solid rgba(237,228,211,.06);color:var(--t2);padding:16px 18px;font-size:clamp(13.5px,3.6vw,15px);line-height:1.7;text-align:left;cursor:pointer;font-family:inherit;transition:all .25s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.qx .le{color:var(--t3);margin-right:8px;font-family:'Courier New',monospace;font-size:12px;transition:color .25s}
+.qx:hover,.qx:active{background:rgba(237,228,211,.055);border-color:rgba(237,228,211,.15);color:var(--t1)}
+.qx:hover .le,.qx:active .le{color:var(--gold)}
+.qx.sel{background:rgba(212,64,90,.12);border-color:rgba(212,64,90,.4);color:var(--t1)}
+.qx.sel .le{color:var(--red)}
+.qx.off{pointer-events:none;opacity:.55}
+#s-result{padding:0}
+.rw{max-width:600px;margin:0 auto;padding:48px 20px 56px}
+.rh{text-align:center;margin-bottom:40px}
+.rl{font-size:11px;letter-spacing:6px;font-family:'Courier New',monospace;margin-bottom:18px;text-transform:uppercase}
+.re{font-size:64px;margin-bottom:18px;display:inline-block}
+.rn{font-size:clamp(24px,6.5vw,34px);font-weight:700;letter-spacing:4px;margin-bottom:6px}
+.rne{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--t3)}
+.rk{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:36px}
+.rkw{padding:5px 14px;font-size:12px;letter-spacing:2px;border:1px solid}
+.rc{background:rgba(237,228,211,.025);border:1px solid rgba(237,228,211,.05);padding:28px 24px;margin-bottom:40px}
+.rdt{font-size:14.5px;line-height:2.2;color:#c4b69e}
+.rwk{font-size:12.5px;color:var(--t3);font-style:italic;margin-top:18px}
+.rsl{text-align:center;font-size:11px;letter-spacing:5px;color:var(--t2);font-family:'Courier New',monospace;margin-bottom:18px}
+.rr{text-align:center;margin-bottom:40px}
+.rr svg{width:100%;max-width:290px;display:block;margin:0 auto}
+.rts{margin-bottom:40px}
+.rt{margin-bottom:12px}
+.rti{display:flex;justify-content:space-between;margin-bottom:4px}
+.rtn{font-size:12px;color:var(--t2)}
+.rtv{font-size:12px;font-family:'Courier New',monospace}
+.rtk{height:3px;background:rgba(237,228,211,.05)}
+.rtf{height:100%;transition:width 1.4s cubic-bezier(.22,1,.36,1)}
+.r3s{margin-bottom:48px}
+.r3{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(237,228,211,.04)}
+.r3e{font-size:20px;width:32px;text-align:center;flex-shrink:0}
+.r3r{flex:1;min-width:0}
+.r3m{display:flex;justify-content:space-between;margin-bottom:4px}
+.r3n{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r3p{font-size:12px;color:var(--t3);font-family:'Courier New',monospace;flex-shrink:0;margin-left:8px}
+.r3b{height:2px;background:rgba(237,228,211,.05)}
+.r3f{height:100%;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.ra{display:flex;flex-direction:column;align-items:center;gap:12px}
+.rbsh{width:100%;max-width:300px;padding:15px;border:none;font-size:14.5px;font-family:inherit;font-weight:600;letter-spacing:4px;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.rbsh:hover,.rbsh:active{opacity:.85;transform:scale(1.01)}
+.rbre{width:100%;max-width:300px;padding:13px;background:0 0;border:1px solid rgba(237,228,211,.12);color:var(--t2);font-size:13.5px;font-family:inherit;letter-spacing:4px;cursor:pointer;transition:all .3s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.rbre:hover,.rbre:active{border-color:rgba(237,228,211,.25);color:var(--t1)}
+.rfo{text-align:center;margin-top:48px;font-size:10px;color:#2e2a25;letter-spacing:3px;font-family:'Courier New',monospace}
+.tst{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(30,28,36,.95);border:1px solid rgba(237,228,211,.1);color:var(--t1);padding:12px 28px;font-size:13px;font-family:'Noto Serif SC',serif;letter-spacing:1px;z-index:10000;opacity:0;transition:all .4s ease;pointer-events:none;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:2px;white-space:nowrap}
+.tst.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:420px){.sb{padding:15px 44px;font-size:14px;letter-spacing:4px}.qy{padding:24px 16px 40px}.rw{padding:40px 16px 48px}.rc{padding:22px 18px}}
+@supports(padding:max(0px)){.qh{padding-top:max(16px,env(safe-area-inset-top))}.rw{padding-bottom:max(56px,calc(env(safe-area-inset-bottom)+40px))}#s-start{padding-bottom:max(48px,calc(env(safe-area-inset-bottom)+32px))}}
+</style>
+</head>
+<body>
+<div class="tst" id="tst"></div>
+<div class="scr on" id="s-start">
+  <div class="sg a"></div><div class="sg b"></div>
+  <div class="sw anim-up">
+    <div class="si">🎬</div>
+    <h1 class="st">你的灵魂像哪位导演</h1>
+    <p class="ss">Director Personality Test</p>
+    <p class="sd">20道脑洞大开的问题<br>21位传奇导演的灵魂等待与你相遇<br>找到属于你的电影人格</p>
+    <button class="sb" id="go"><span>开 始 测 试</span></button>
+    <p class="sm">约需 3–5 分钟 · 共 20 题</p>
+  </div>
+</div>
+<div class="scr" id="s-quiz">
+  <div class="qh"><div class="qp"><div class="qb"><div class="qf" id="qf"></div></div><span class="qn" id="qn"></span></div></div>
+  <div class="qy"><h2 class="qt" id="qt"></h2><div class="qo" id="qo"></div></div>
+</div>
+<div class="scr" id="s-result"><div class="rw" id="rw"></div></div>
+<script>
+var D={
+kubrick:{name:"斯坦利·库布里克",en:"Stanley Kubrick",emoji:"🎯",col:"#1a1a2e",ac:"#e94560",
+  tr:{perfectionism:98,emotion:15,rebellion:60,philosophy:95,visual:95,narrative:70,humor:20,humanity:10},
+  desc:"你是一个让强迫症都自愧不如的完美主义暴君。你最大的魅力是那种冷到骨子里的精确——你拍一个镜头能拍70遍，不是因为不好，而是因为还不够「神」。虽然你有时候会把身边的人逼到崩溃，但你内心里其实是一个被宇宙的浩瀚吓到说不出话的小孩。只有那些愿意和你一起在深夜反复讨论「人类到底有没有灵魂」的人，才会懂你那层冰壳下面藏着的战栗。你大概率有数据囤积癖，手机相册分类精确到令人发指。",
+  kw:["控制狂","冷血美学","细节偏执","宇宙级孤独"],wk:"《2001太空漫游》《发条橙》《闪灵》"},
+miyazaki:{name:"宫崎骏",en:"Hayao Miyazaki",emoji:"🌿",col:"#1b4332",ac:"#74c69d",
+  tr:{perfectionism:80,emotion:95,rebellion:30,philosophy:65,visual:90,narrative:75,humor:50,humanity:98},
+  desc:"你是一个嘴上说着「人类真是没救了」却偷偷为每一朵花画上露珠的倔老头型人格。你最大的魅力是那种不讲道理的温柔——你能让一阵风都带上感情。虽然你有时候会对现代社会发出「啧」的声音并陷入暴躁，但你内心里其实是全世界最相信善良的人。只有那些能在雨天安静坐在你旁边、一起听雨滴落在叶子上的人，才会懂你倔强外壳下那颗化不开的少年心。你一定偷偷养过什么小动物，而且给它起了个特别认真的名字。",
+  kw:["暴躁慈悲","万物有灵","手作执念","赤子之心"],wk:"《千与千寻》《龙猫》《天空之城》"},
+tarantino:{name:"昆汀·塔伦蒂诺",en:"Quentin Tarantino",emoji:"💥",col:"#3d0000",ac:"#ff6b35",
+  tr:{perfectionism:30,emotion:40,rebellion:98,philosophy:15,visual:55,narrative:90,humor:95,humanity:35},
+  desc:"你是一个把「话痨」修炼成行为艺术的叛逆天才。你最大的魅力是那种把全世界的烂片冷知识变成迷人谈资的本事——跟你吃饭永远不会无聊，但可能会被服务员投来异样的目光。虽然你有时候会沉迷于自己的世界到忘记别人的存在，但你内心里其实是一个渴望找到「同频率怪人」的孤独收藏家。只有那些凌晨三点还能跟你争论「B级片到底算不算艺术」的人，才会懂你为什么笑着笑着眼睛会突然亮起来。你的歌单一定乱七八糟但每首都有故事。",
+  kw:["话痨之王","垃圾文化教授","暴力诗人","人形点唱机"],wk:"《低俗小说》《杀死比尔》《无耻混蛋》"},
+wonkar:{name:"王家卫",en:"Wong Kar-wai",emoji:"🌃",col:"#0d1b2a",ac:"#00b4d8",
+  tr:{perfectionism:75,emotion:98,rebellion:45,philosophy:70,visual:98,narrative:40,humor:10,humanity:60},
+  desc:"你是一个活在自己情绪里的时间旅行者。你最大的魅力是那种让人说不清道不明的氛围感——你往那儿一站，背景自动变成霓虹灯下的雨夜。虽然你有时候会矫情到连自己都受不了自己，但你内心里其实是一个被「错过」这件事反复击穿的人。只有那些懂得在凌晨两点不问「你在干嘛」而是发一首老歌给你的人，才会懂你墨镜背后那双看什么都像在告别的眼睛。你一定保留着某个人很久以前发的消息，偶尔会翻出来看看。",
+  kw:["氛围感怪物","时间囚徒","已读不回大师","墨镜哲学家"],wk:"《花样年华》《重庆森林》《春光乍泄》"},
+nolan:{name:"克里斯托弗·诺兰",en:"Christopher Nolan",emoji:"⏰",col:"#14213d",ac:"#fca311",
+  tr:{perfectionism:90,emotion:45,rebellion:35,philosophy:85,visual:80,narrative:98,humor:10,humanity:50},
+  desc:"你是一个用Excel表格写情书的叙事建筑师。你最大的魅力是那种把所有人都绕晕了、然后优雅地揭开谜底时的得意——你天生就是那种考试交卷最晚但分最高的人。虽然你有时候会因为太沉迷于「结构」而忘记了「感受」，但你内心里其实是一个害怕时间流逝、想要抓住一切的人。只有那些不会在你说「其实这里有一个隐藏的对称结构」时翻白眼的人，才会懂你反复拆解世界的背后，是一种笨拙的深情。你大概率有画思维导图的习惯。",
+  kw:["人形解谜机","时间恐惧症","烧脑成瘾","理科生浪漫"],wk:"《盗梦空间》《星际穿越》《信条》"},
+fellini:{name:"费德里科·费里尼",en:"Federico Fellini",emoji:"🎪",col:"#2d0036",ac:"#e040fb",
+  tr:{perfectionism:25,emotion:80,rebellion:70,philosophy:50,visual:85,narrative:35,humor:90,humanity:85},
+  desc:"你是一个在菜市场也能看见马戏团的梦游者。你最大的魅力是那种把混乱变成狂欢的天赋——别人的人生是线性的，你的是旋转木马。虽然你有时候会让身边的人搞不清你到底是在开玩笑还是认真的，但你内心里其实是一个深知「荒诞才是真相」的通透之人。只有那些能跟你一起在暴雨中跳舞而不问「为什么」的人，才会懂你小丑妆底下那张认真到发光的脸。你的朋友圈一定很少发，但发出来的每条都让人看不懂又想点赞。",
+  kw:["人间马戏团长","荒诞即正义","浪漫流浪汉","清醒梦游者"],wk:"《八部半》《甜蜜的生活》《大路》"},
+hitchcock:{name:"阿尔弗雷德·希区柯克",en:"Alfred Hitchcock",emoji:"🔪",col:"#1a1a1a",ac:"#b91c1c",
+  tr:{perfectionism:90,emotion:30,rebellion:25,philosophy:40,visual:80,narrative:95,humor:75,humanity:30},
+  desc:"你是一个笑眯眯地往你椅子下面绑炸弹的英国绅士。你最大的魅力是那种「我什么都知道但我就是不说」的从容——你永远是饭局上最后揭底牌的人。虽然你有时候会因为太享受操控感而显得有点「阴间」，但你内心里其实是一个极度害怕失控的人。只有那些能在你精心设计的「巧合」中识破你心思的人，才会让你真正感到兴奋。你一定是那种能把恐怖故事讲成笑话、又能把笑话讲出恐怖感的人。",
+  kw:["优雅变态","悬念上瘾","控场之王","冷笑话刺客"],wk:"《惊魂记》《后窗》《迷魂记》"},
+tarkovsky:{name:"安德烈·塔可夫斯基",en:"Andrei Tarkovsky",emoji:"💧",col:"#0a0a0a",ac:"#90a4ae",
+  tr:{perfectionism:60,emotion:85,rebellion:55,philosophy:98,visual:95,narrative:20,humor:5,humanity:75},
+  desc:"你是一个觉得「快乐」这个词太肤浅的灵魂苦行僧。你最大的魅力是那种让人在你身边自动放慢呼吸的气场——你不说话的时候比大多数人说一万句都更有分量。虽然你有时候会把简单的事情想得过于沉重，但你内心里其实是一个被美击穿过太多次、所以不敢轻易感动的人。只有那些能跟你一起沉默两小时、看完雨滴沿着玻璃滑下来而不觉得无聊的人，才会懂你眼里那种似水的忧伤。你大概率讨厌短视频，觉得那是对时间的亵渎。",
+  kw:["沉默即暴力","灵魂潜水员","慢即是快","雨水收藏家"],wk:"《潜行者》《镜子》《乡愁》"},
+spielberg:{name:"史蒂文·斯皮尔伯格",en:"Steven Spielberg",emoji:"✨",col:"#1a237e",ac:"#42a5f5",
+  tr:{perfectionism:65,emotion:90,rebellion:10,philosophy:30,visual:70,narrative:85,humor:60,humanity:95},
+  desc:"你是一个五十岁了还会被圣诞树上的灯泡感动到哭的大小孩。你最大的魅力是那种毫不掩饰的真诚——当所有人都在装酷的时候，你是唯一一个敢说「我就是觉得好感动」的人。虽然你有时候会因为太想让所有人都开心而稍显用力，但你内心里其实是一个坚信「好故事能拯救世界」的理想主义者。只有那些在电影院被你带着一起又哭又笑的人，才会懂你那颗永远拒绝长大的心有多珍贵。你一定是朋友圈里最先转发温暖故事的那个。",
+  kw:["人形催泪弹","永恒男孩","造梦CEO","温暖暴力"],wk:"《辛德勒的名单》《E.T.》《侏罗纪公园》"},
+lynch:{name:"大卫·林奇",en:"David Lynch",emoji:"🌀",col:"#1a0a2e",ac:"#7c4dff",
+  tr:{perfectionism:40,emotion:60,rebellion:95,philosophy:75,visual:85,narrative:15,humor:55,humanity:35},
+  desc:"你是一个在别人的噩梦里开派对的超现实主义房东。你最大的魅力是那种让人完全猜不透你的不可预测性——跟你聊天像解谜，但谜底永远是另一个谜。虽然你有时候会把身边的人吓到（不是故意的……大概），但你内心里其实是一个对「正常」这个词深感恐惧的纯真灵魂。只有那些半夜给你发一张奇怪的照片、你会回复「太美了」的人，才是你真正的同类。你的搜索记录一定非常精彩，建议永远不要公开。",
+  kw:["噩梦策展人","怪诞收藏家","直觉动物","诡异即正义"],wk:"《穆赫兰道》《蓝丝绒》《双峰》"},
+leeang:{name:"李安",en:"Ang Lee",emoji:"🎋",col:"#1b2a1b",ac:"#aed581",
+  tr:{perfectionism:75,emotion:90,rebellion:15,philosophy:60,visual:75,narrative:80,humor:30,humanity:90},
+  desc:"你是一个在饭桌上沉默不语、却把所有人都看透的温润刺客。你最大的魅力是那种不动声色的深情——你从不大喊大叫，但你一句轻描淡写的话能让人回去哭一宿。虽然你有时候会因为太在意别人的感受而把自己压得喘不过气，但你内心里其实是一个在东西方文化的夹缝里修炼出了超能力的翻译者。只有那些能在你客客气气的微笑底下读出「我快爆炸了」的人，才会懂你那份隐忍有多性感。你一定是那种吵架都不会提高音量的人。",
+  kw:["温柔刀客","沉默爆破手","文化两栖人","隐忍系天花板"],wk:"《卧虎藏龙》《断背山》《少年派》"},
+coen:{name:"科恩兄弟",en:"Coen Brothers",emoji:"🎭",col:"#1a1a0a",ac:"#ffab00",
+  tr:{perfectionism:70,emotion:20,rebellion:65,philosophy:55,visual:65,narrative:85,humor:98,humanity:25},
+  desc:"你是一个在葬礼上忍不住想笑的黑色幽默患者。你最大的魅力是那种「我看这个世界就像看一出荒诞喜剧」的通透——你总能在最严肃的场合发现最可笑的细节。虽然你有时候会因为太冷静而被误解为冷血，但你内心里其实是一个早就看穿了命运的荒谬、所以选择用笑来回应的聪明人。只有那些能跟你一起对着新闻联播笑出声的人，才会懂你那种「认真你就输了」背后的深刻。你一定是群聊里最会阴阳怪气的那个。",
+  kw:["阴阳怪气之神","命运嘲笑家","冷血段子手","荒诞清醒者"],wk:"《老无所依》《冰血暴》《大勒波斯基》"},
+bong:{name:"奉俊昊",en:"Bong Joon-ho",emoji:"🪜",col:"#212121",ac:"#00e676",
+  tr:{perfectionism:80,emotion:65,rebellion:75,philosophy:60,visual:65,narrative:90,humor:70,humanity:70},
+  desc:"你是一个把社会批判包装成爆米花电影的地下特工。你最大的魅力是那种「让你笑着笑着突然后背发凉」的叙事魔法——你永远能找到一个切入点，让所有人都以为在看喜剧，结果发现在照镜子。虽然你有时候会因为太敏锐而显得有点愤世嫉俗，但你内心里其实是一个相信「讲一个好故事比喊一万句口号有用」的务实理想主义者。只有那些能听懂你的笑话里藏着刀子的人，才是你真正想对话的观众。你一定对外卖平台的分层定价研究过不止一次。",
+  kw:["糖衣炮弹大师","阶级侦探","笑里藏刀","清醒愤怒者"],wk:"《寄生虫》《杀人回忆》《雪国列车》"},
+wes:{name:"韦斯·安德森",en:"Wes Anderson",emoji:"🎨",col:"#4a1942",ac:"#f8bbd0",
+  tr:{perfectionism:98,emotion:50,rebellion:40,philosophy:25,visual:98,narrative:60,humor:70,humanity:45},
+  desc:"你是一个用对称构图治疗焦虑症的美学偏执狂。你最大的魅力是那种把全世界都变成精致玩偶屋的执念——在你的世界里，连一个快递盒都必须放在画面正中央。虽然你有时候会因为太追求形式感而被人说「你是不是有病」，但你内心里其实是一个用漂亮的包装纸裹住伤口的脆弱小孩。只有那些能在你强迫症般的整齐背后看到一丝颤抖的人，才会懂你为什么非要把世界整理成它不该有的样子。你的手机壁纸一定换过至少200次。",
+  kw:["对称强迫症","色彩独裁者","精致脆弱","玩偶屋建筑师"],wk:"《布达佩斯大饭店》《月升王国》《犬之岛》"},
+villeneuve:{name:"丹尼斯·维伦纽瓦",en:"Denis Villeneuve",emoji:"🏜️",col:"#1a120b",ac:"#d4a373",
+  tr:{perfectionism:85,emotion:50,rebellion:30,philosophy:80,visual:90,narrative:75,humor:5,humanity:55},
+  desc:"你是一个在沙漠里也能找到教堂的沉思型巨人。你最大的魅力是那种「我不着急，你急什么」的史诗级耐心——你说话慢、做事慢、但每一步都踩在命门上。虽然你有时候会因为太沉浸在宏大叙事里而让身边的人觉得你活在另一个星球，但你内心里其实是一个被宇宙的沉默深深震撼过、从此决定用沉默回敬的人。只有那些能陪你在戈壁滩上坐一下午、看沙丘的影子慢慢移动而觉得「这就够了」的人，才会懂你。你大概率喜欢纪录片胜过综艺。",
+  kw:["史诗级慢热","沙漠哲学家","沉默如金","宇宙尺度思考者"],wk:"《沙丘》《银翼杀手2049》《降临》"},
+gerwig:{name:"格蕾塔·葛韦格",en:"Greta Gerwig",emoji:"💗",col:"#2d1b33",ac:"#ff80ab",
+  tr:{perfectionism:35,emotion:90,rebellion:60,philosophy:40,visual:55,narrative:80,humor:75,humanity:95},
+  desc:"你是一个把「成长痛」写成情书的当代女性主义诗人。你最大的魅力是那种毫无防备的真诚——你敢在所有人面前承认「我也不知道答案，但我想聊聊」。虽然你有时候会因为太在意每个人的感受而把自己搞得精疲力竭，但你内心里其实是一个相信「每个普通人的故事都是史诗」的浪漫主义战士。只有那些能在你的自嘲里听出勇敢的人，才会懂你那种看似随意实则精心编排的人生哲学。你一定是那种会在朋友低落时发一大段语音的人。",
+  kw:["真诚即武器","成长痛翻译官","温柔战士","日常史诗家"],wk:"《芭比》《小妇人》《伯德小姐》"},
+varda:{name:"阿涅斯·瓦尔达",en:"Agnès Varda",emoji:"🥔",col:"#3d2b1f",ac:"#e6a157",
+  tr:{perfectionism:40,emotion:85,rebellion:70,philosophy:65,visual:80,narrative:55,humor:70,humanity:98},
+  desc:"你是一个拿着摄像机在菜市场就能拍出哲学论文的街头诗人奶奶。你最大的魅力是那种把「边缘」变成「中心」的魔法——在你眼里，一个捡土豆的流浪汉比任何明星都值得一部电影。虽然你有时候会因为太博爱而让人觉得你对谁都好，但你内心里其实是一个用镜头做了一辈子田野调查的温柔革命者。只有那些能跟你一起蹲在路边跟一只野猫聊天还不觉得尴尬的人，才会懂你那种把整个世界都当作自家后院的从容。你一定会在菜市场跟摊贩聊上半小时。",
+  kw:["菜市场哲学家","温柔革命者","边缘收藏家","拾穗人"],wk:"《拾穗者》《脸庞，村庄》《五至七时的克莱奥》"},
+akerman:{name:"香特尔·阿克曼",en:"Chantal Akerman",emoji:"🚪",col:"#2a1a2a",ac:"#ce93d8",
+  tr:{perfectionism:70,emotion:80,rebellion:85,philosophy:80,visual:75,narrative:30,humor:5,humanity:70},
+  desc:"你是一个用三小时拍一个女人削土豆、然后让你突然哭出来的激进温柔主义者。你最大的魅力是那种「我就是不给你高潮，你自己感受」的倔强——你拒绝一切戏剧化的讨好，因为你知道真正的暴力藏在日常的重复里。虽然你有时候会让身边的人觉得你「太沉重了」，但你内心里其实是一个用极端的耐心守护着那些从不被看见的人的人。只有那些能在你长达五分钟的固定镜头里读出愤怒和心碎的人，才会懂你为什么说「家务即政治」。你大概率有记日记的习惯，而且每一页都比小说好看。",
+  kw:["激进温柔","家务即政治","固定镜头女王","日常即深渊"],wk:"《让娜·迪尔曼》《美国故事》《我你他她》"},
+apichatpong:{name:"阿彼察邦",en:"Apichatpong Weerasethakul",emoji:"🌙",col:"#0d1a0d",ac:"#81c784",
+  tr:{perfectionism:20,emotion:70,rebellion:60,philosophy:85,visual:90,narrative:10,humor:30,humanity:70},
+  desc:"你是一个把午睡拍成宗教仪式的热带通灵者。你最大的魅力是那种让人分不清「我是在看电影还是我已经睡着了而这本身就是电影」的迷幻边界感。虽然你有时候会让身边的人怀疑你是不是来自另一个维度，但你内心里其实是一个相信「万物皆有灵，包括你正在走神的这个瞬间」的温柔巫师。只有那些能在你的电影里睡着、醒来后觉得「这是我看过最美的东西」的人，才是你的知音。你一定对丛林有某种无法解释的执念。",
+  kw:["热带通灵者","午睡导演","丛林神秘主义","梦与醒之间"],wk:"《能召回前世的布米叔叔》《记忆》《热带疾病》"},
+koreeda:{name:"是枝裕和",en:"Hirokazu Koreeda",emoji:"🍙",col:"#2b2420",ac:"#bcaaa4",
+  tr:{perfectionism:55,emotion:95,rebellion:10,philosophy:50,visual:65,narrative:75,humor:40,humanity:98},
+  desc:"你是一个用一碗味增汤就能让人哭出来的日常大师。你最大的魅力是那种「什么都没发生，但什么都发生了」的平静杀伤力——你拍一家人吃饭能比别人拍世界末日还让人揪心。虽然你有时候会因为太温和而被误以为没有锋芒，但你内心里其实是一个对「家」这个字眼反复拷问、温柔地拆解到骨头里的人。只有那些能在你镜头里一个小孩吃玉米的画面中看到整个人生的人，才会懂你那种克制到极致反而爆发的情感。你一定很会做饭，而且做的菜都很朴素但特别好吃。",
+  kw:["日常核弹","饭桌考古学家","温柔解剖师","平凡即奇迹"],wk:"《小偷家族》《步履不停》《无人知晓》"},
+jia:{name:"贾樟柯",en:"Jia Zhangke",emoji:"🏚️",col:"#3a3028",ac:"#a1887f",
+  tr:{perfectionism:35,emotion:75,rebellion:80,philosophy:70,visual:70,narrative:70,humor:35,humanity:90},
+  desc:"你是一个把县城拍成史诗的中国底层编年史家。你最大的魅力是那种「我不美化也不丑化，我就让你看」的冷静和尊严感——你的镜头从不居高临下，但你拍的每一个普通人都有一种沉甸甸的分量。虽然你有时候会因为太执着于「真实」而显得不那么讨喜，但你内心里其实是一个深爱着这片土地上每一个被时代碾过却还在笑的人。只有那些能在你电影里的KTV场景中同时看到荒凉和生命力的人，才会懂你为什么一直在拍「那些不会被拍到的人」。你一定有一个老家的朋友从来不联系但你时常想起。",
+  kw:["县城荷马","时代录像机","底层考古学家","三峡好人"],wk:"《三峡好人》《山河故人》《小武》"}
+};
+
+var TL={perfectionism:"完美主义",emotion:"情感浓度",rebellion:"叛逆指数",philosophy:"哲学脑",visual:"视觉癖",narrative:"叙事力",humor:"搞笑值",humanity:"人味儿"};
+
+var Q=[
+{q:"你的猫从桌上把你最贵的杯子推下去了：",o:[
+  {t:"蹲下来研究碎裂纹路，比杯子本身还美",s:{kubrick:3,wes:2,villeneuve:1}},
+  {t:"给碎片打光拍九宫格",s:{wonkar:3,lynch:2,varda:1}},
+  {t:"骂了猫三秒然后抱着它道歉",s:{miyazaki:3,gerwig:2,koreeda:2}},
+  {t:"「猫其实在执行一项秘密暗杀计划」",s:{hitchcock:3,coen:2,bong:1}}]},
+{q:"你被困在一个无限循环的电梯里：",o:[
+  {t:"数每次循环的细微差别，寻找bug",s:{nolan:3,kubrick:2,hitchcock:1}},
+  {t:"坐下来闭眼，无限循环挺适合冥想",s:{tarkovsky:3,apichatpong:3,akerman:1}},
+  {t:"对着监控摄像头讲脱口秀",s:{tarantino:3,fellini:2,coen:1}},
+  {t:"给电梯按钮们取名字并设定人物关系",s:{varda:3,miyazaki:2,gerwig:1}}]},
+{q:"朋友群里说「有大消息」然后人消失了：",o:[
+  {t:"焦虑到每三十秒刷一次聊天",s:{wonkar:3,leeang:2,akerman:1}},
+  {t:"脑中已画出五种可能性的概率分布",s:{nolan:3,hitchcock:2,kubrick:1}},
+  {t:"连发15条语音催命",s:{tarantino:3,gerwig:2,spielberg:1}},
+  {t:"回一个「。」然后把手机扣过去",s:{tarkovsky:3,coen:2,apichatpong:1}}]},
+{q:"上帝说你可以删除一种人类情感：",o:[
+  {t:"无聊——没有它人类早上天了",s:{tarantino:3,fellini:2,lynch:1}},
+  {t:"谢谢，我一个都不删",s:{miyazaki:3,koreeda:2,varda:2}},
+  {t:"嫉妒——它把所有好东西都变酸了",s:{leeang:3,gerwig:2,spielberg:1}},
+  {t:"不删情感，我想删「肤浅」这种状态",s:{tarkovsky:3,akerman:2,kubrick:1}}]},
+{q:"如果你能暂停全世界十分钟：",o:[
+  {t:"把方圆一公里的东西全摆成完美对称",s:{wes:3,kubrick:2,hitchcock:1}},
+  {t:"走到街上一个个看每张定格的脸",s:{varda:3,wonkar:2,fellini:1}},
+  {t:"翻所有人的手机聊天记录",s:{hitchcock:3,bong:2,lynch:1}},
+  {t:"哪也不去，就听十分钟真正的安静",s:{tarkovsky:3,apichatpong:2,akerman:2}}]},
+{q:"你更害怕哪种噩梦？",o:[
+  {t:"所有人认识你，但你不认识任何人",s:{wonkar:3,spielberg:2,jia:1}},
+  {t:"发现这世界其实是某人写的剧本",s:{lynch:3,nolan:2,apichatpong:1}},
+  {t:"年度总结PPT在全公司面前打不开",s:{nolan:3,kubrick:2,wes:2}},
+  {t:"一切如常但你就是觉得哪里不对",s:{akerman:3,tarkovsky:2,hitchcock:1}}]},
+{q:"预算只够装修一样东西，你选：",o:[
+  {t:"一整面书架，按色谱排列",s:{wes:3,kubrick:2,nolan:1}},
+  {t:"一扇好窗户，要有最好的自然光",s:{tarkovsky:3,apichatpong:2,akerman:2}},
+  {t:"一套顶级音响系统",s:{tarantino:3,wonkar:2,lynch:1}},
+  {t:"一张能坐下八个人的大餐桌",s:{koreeda:3,miyazaki:2,jia:2,gerwig:1}}]},
+{q:"收到一个没有署名的神秘包裹：",o:[
+  {t:"量尺寸、查邮戳、分析胶带品牌",s:{kubrick:3,nolan:2,wes:1}},
+  {t:"一秒撕开，悬念是给胆小鬼准备的",s:{tarantino:3,fellini:2,gerwig:1}},
+  {t:"先放在不同光线下拍了几组照片",s:{varda:3,wonkar:2,lynch:1}},
+  {t:"在窗台上放三天，享受「不知道」的快感",s:{apichatpong:3,tarkovsky:2,akerman:1}}]},
+{q:"如果你是一种天气：",o:[
+  {t:"暴风雨前那种让头皮发麻的闷热",s:{hitchcock:3,lynch:2,bong:1}},
+  {t:"热带午后说来就来的暴雨",s:{apichatpong:3,tarantino:2,fellini:1}},
+  {t:"冬天清晨第一场雪落地的声音",s:{miyazaki:3,koreeda:2,akerman:1}},
+  {t:"黄昏最后那几分钟，什么都在消失",s:{wonkar:3,varda:2,leeang:1}}]},
+{q:"有人说你「想太多了」：",o:[
+  {t:"谢谢，想少了才可怕",s:{kubrick:3,wes:2,nolan:1}},
+  {t:"你确定不是你想太少了？",s:{bong:3,coen:2,jia:1}},
+  {t:"你说得对……但我真的停不下来",s:{leeang:3,gerwig:2,koreeda:1}},
+  {t:"不是我想多了，是这个世界太粗糙",s:{wonkar:3,tarkovsky:2,akerman:2}}]},
+{q:"给全人类发一条匿名弹幕：",o:[
+  {t:"「闭嘴听风」",s:{tarkovsky:3,villeneuve:2,apichatpong:1}},
+  {t:"「你演得太用力了」",s:{coen:3,bong:2,jia:1}},
+  {t:"「没事的，会好的」",s:{spielberg:3,miyazaki:2,gerwig:2,koreeda:1}},
+  {t:"「你是不是也有种被谁盯着的感觉」",s:{hitchcock:3,lynch:2,wonkar:1,akerman:1}}]},
+{q:"做了个很离谱的梦，醒来后：",o:[
+  {t:"抓起手机记下每个不合理的细节",s:{lynch:3,fellini:2,apichatpong:2}},
+  {t:"画一张梦的流程图分析叙事漏洞",s:{nolan:3,kubrick:2,hitchcock:1}},
+  {t:"添油加醋讲给朋友听当段子",s:{tarantino:3,gerwig:2,spielberg:1}},
+  {t:"闭上眼试图再回到梦里",s:{wonkar:3,akerman:2,koreeda:1}}]},
+{q:"你最想要的无用超能力：",o:[
+  {t:"看到别人脑海里正在播放的画面",s:{lynch:3,apichatpong:2,kubrick:1}},
+  {t:"让周围一切自动变成完美对称",s:{wes:3,nolan:2,kubrick:2}},
+  {t:"摸到任何东西就能看到它的一生",s:{varda:3,wonkar:2,jia:2}},
+  {t:"给全世界的BGM换成你的歌单",s:{tarantino:3,coen:2,fellini:2}}]},
+{q:"吵完架冷战中，你会：",o:[
+  {t:"写了三千字长信，然后永久存入草稿箱",s:{wonkar:3,akerman:2,tarkovsky:1}},
+  {t:"面不改色装没事，内心在排练下一次对话",s:{hitchcock:3,kubrick:2,nolan:1}},
+  {t:"憋不住先发一句「你吃了吗」破冰",s:{spielberg:3,gerwig:2,koreeda:1}},
+  {t:"什么都不说，默默做了一桌菜",s:{miyazaki:3,koreeda:2,jia:1}}]},
+{q:"你的人生电影片尾你想要：",o:[
+  {t:"一首没有歌词的钢琴曲，画面慢慢暗掉",s:{tarkovsky:3,akerman:2,villeneuve:2}},
+  {t:"一首烂大街但全场大合唱的老歌",s:{spielberg:3,jia:2,gerwig:1}},
+  {t:"一首只有37个人听过的地下乐队的歌",s:{lynch:3,coen:2,wes:1}},
+  {t:"没有音乐，只有环境音慢慢消失",s:{wonkar:3,apichatpong:2,leeang:1}}]},
+{q:"好朋友说她在公司被当透明人了：",o:[
+  {t:"立刻帮她拆解局面+三步行动计划",s:{nolan:3,hitchcock:2,bong:2}},
+  {t:"什么也不说，就默默陪她坐着",s:{koreeda:3,tarkovsky:2,miyazaki:1}},
+  {t:"「走，现在就去喝一杯，骂他个够」",s:{gerwig:3,tarantino:2,varda:1}},
+  {t:"过了很久发一条消息：「我一直都看见你」",s:{akerman:3,leeang:2,wonkar:1}}]},
+{q:"你更喜欢怎么记录生活？",o:[
+  {t:"手写日记，像给未来的自己写密信",s:{akerman:3,wonkar:2,tarkovsky:1}},
+  {t:"到处拍——垃圾桶、野猫、墙上的裂缝",s:{varda:3,jia:2,fellini:1}},
+  {t:"做精致相册，配色排版必须完美",s:{wes:3,gerwig:2,spielberg:1}},
+  {t:"不记录，记住了就记住了，忘了就忘了",s:{apichatpong:3,miyazaki:2,koreeda:1}}]},
+{q:"看完一部让你久久回不过神的电影：",o:[
+  {t:"它戳中了你一直想说但说不出的东西",s:{akerman:3,leeang:2,wonkar:2}},
+  {t:"它让你第一次注意到了某些人的存在",s:{varda:3,jia:2,koreeda:2}},
+  {t:"你在黑暗中偷偷哭了又偷偷笑了",s:{gerwig:3,spielberg:2,miyazaki:1}},
+  {t:"你想立刻二刷来研究它是怎么做到的",s:{nolan:3,kubrick:2,hitchcock:1}}]},
+{q:"如果你死后可以变成一样东西留在人间：",o:[
+  {t:"一盏永远不关的路灯",s:{wonkar:3,jia:2,leeang:1}},
+  {t:"一部没有结局的电影",s:{lynch:3,apichatpong:2,tarkovsky:1}},
+  {t:"一张被很多人坐过的公园长椅",s:{varda:3,koreeda:2,gerwig:2}},
+  {t:"一个所有人都找不到的暗门",s:{hitchcock:3,kubrick:2,akerman:1,bong:1}}]},
+{q:"最想印在T恤上的一句话：",o:[
+  {t:"「请勿触碰」",s:{kubrick:3,wes:2,hitchcock:2,nolan:1}},
+  {t:"「人生苦短，别看烂片」",s:{tarantino:3,coen:2,fellini:1,bong:1}},
+  {t:"「我没事」（背面写着「骗你的」）",s:{leeang:3,wonkar:2,akerman:2,koreeda:1}},
+  {t:"「你看那朵云」",s:{varda:3,miyazaki:2,apichatpong:2,gerwig:1}}]}
+];
+
+var qs=[],ci=0,ans=[],busy=false;
+function shuffle(a){var b=[].concat(a);for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t}return b}
+function $(id){return document.getElementById(id)}
+function show(id){document.querySelectorAll('.scr').forEach(function(s){s.classList.remove('on')});$(id).classList.add('on');window.scrollTo(0,0)}
+function toast(m){var t=$('tst');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2400)}
+function start(){qs=shuffle(Q);ci=0;ans=[];busy=false;render();show('s-quiz')}
+function render(){
+  var q=qs[ci],tot=qs.length,pct=(ci/tot)*100;
+  $('qf').style.width=pct+'%';$('qn').textContent=(ci+1)+' / '+tot;
+  var txt=$('qt');txt.textContent=q.q;txt.className='qt anim-sm';
+  var box=$('qo');box.innerHTML='';box.className='qo anim-sm2';
+  var L=['A','B','C','D'];
+  q.o.forEach(function(opt,i){
+    var b=document.createElement('button');b.className='qx';
+    b.innerHTML='<span class="le">'+L[i]+'.</span>'+opt.t;
+    b.addEventListener('click',function(e){e.preventDefault();pick(b,opt)});
+    box.appendChild(b);
+  });
+}
+function pick(btn,opt){
+  if(busy)return;busy=true;
+  document.querySelectorAll('.qx').forEach(function(b){b.classList.add('off')});
+  btn.classList.remove('off');btn.classList.add('sel');
+  ans.push(opt.s);
+  setTimeout(function(){if(ci<qs.length-1){ci++;render();busy=false}else{result()}},400);
+}
+function result(){
+  var sc={};Object.keys(D).forEach(function(k){sc[k]=0});
+  ans.forEach(function(a){Object.keys(a).forEach(function(k){if(sc[k]!==undefined)sc[k]+=a[k]})});
+  var sorted=Object.entries(sc).sort(function(a,b){return b[1]-a[1]});
+  var wk=sorted[0][0],dir=D[wk];
+  var second=sorted.length>1?D[sorted[1][0]]:dir;
+  var topScore=sorted[0][1],secScore=sorted.length>1?sorted[1][1]:0;
+  var blend=topScore>0?Math.min(secScore/topScore,0.35):0;
+  var traits={};
+  Object.keys(TL).forEach(function(t){traits[t]=dir.tr[t]*(1-blend)+second.tr[t]*blend});
+  var top3=sorted.slice(0,3),mx=top3[0][1];
+  var rs=$('s-result');
+  rs.style.background='linear-gradient(175deg,'+dir.col+' 0%,#07060b 45%,'+dir.col+'44 100%)';
+  var h='<div class="rh"><p class="rl" style="color:'+dir.ac+'">YOUR DIRECTOR PERSONALITY</p>';
+  h+='<div class="re" style="filter:drop-shadow(0 0 24px '+dir.ac+'40)">'+dir.emoji+'</div>';
+  h+='<h1 class="rn">'+dir.name+'</h1><p class="rne">'+dir.en+'</p></div>';
+  h+='<div class="rk">';dir.kw.forEach(function(k){h+='<span class="rkw" style="color:'+dir.ac+';border-color:'+dir.ac+'40">'+k+'</span>'});h+='</div>';
+  h+='<div class="rc"><p class="rdt">'+dir.desc+'</p><p class="rwk">代表作：'+dir.wk+'</p></div>';
+  h+='<div class="rr"><p class="rsl">你 的 创 作 人 格 图 谱</p>'+radar(traits,dir.ac)+'</div>';
+  h+='<div class="rts">';
+  Object.keys(traits).forEach(function(k){var v=traits[k];
+    h+='<div class="rt"><div class="rti"><span class="rtn">'+TL[k]+'</span><span class="rtv" style="color:'+dir.ac+'">'+Math.round(v)+'</span></div>';
+    h+='<div class="rtk"><div class="rtf" style="width:0;background:linear-gradient(90deg,'+dir.ac+'80,'+dir.ac+')" data-w="'+v+'%"></div></div></div>'});
+  h+='</div>';
+  h+='<div class="r3s"><p class="rsl">最 匹 配  T O P  3</p>';
+  top3.forEach(function(item,i){var dk=item[0],s=item[1],d=D[dk],p=Math.round((s/mx)*100);
+    h+='<div class="r3"><span class="r3e">'+d.emoji+'</span><div class="r3r"><div class="r3m"><span class="r3n" style="color:'+(i===0?'#ede4d3':'#9e9282')+';font-weight:'+(i===0?'600':'400')+'">'+d.name+'</span>';
+    h+='<span class="r3p">'+p+'%</span></div><div class="r3b"><div class="r3f" style="width:0;background:'+(i===0?dir.ac:'#5c5448')+'" data-w="'+p+'%"></div></div></div></div>'});
+  h+='</div>';
+  h+='<div class="ra"><button class="rbsh" id="bsh" style="background:'+dir.ac+';color:#07060b">分 享 结 果</button>';
+  h+='<button class="rbre" id="bre">重 新 测 试</button></div>';
+  h+='<p class="rfo">DIRECTOR PERSONALITY TEST · 导演人格测试</p>';
+  $('rw').innerHTML=h;$('rw').className='rw anim-up';show('s-result');
+  $('bsh').addEventListener('click',function(e){e.preventDefault();share(dir)});
+  $('bre').addEventListener('click',function(e){e.preventDefault();start()});
+  requestAnimationFrame(function(){setTimeout(function(){document.querySelectorAll('.rtf,.r3f').forEach(function(el){el.style.width=el.dataset.w})},250)});
+}
+function share(dir){
+  var txt='\u{1F3AC} 我做了「你的灵魂像哪位导演」人格测试，我的结果是——'+dir.name+'（'+dir.en+'）！'+dir.kw.join(' · ')+'。来测测你像哪位导演吧！';
+  if(navigator.share){navigator.share({title:'电影导演人格测试',text:txt}).catch(function(){})}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast('✓ 已复制到剪贴板')}).catch(function(){fc(txt)})}
+  else{fc(txt)}
+}
+function fc(txt){var ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;left:-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('✓ 已复制到剪贴板')}catch(e){prompt('复制以下文字分享：',txt)}document.body.removeChild(ta)}
+function radar(traits,ac){
+  var keys=Object.keys(traits),vals=Object.values(traits),n=keys.length,cx=150,cy=150,r=105;
+  function pt(i,v){var a=Math.PI*2*i/n-Math.PI/2;return[cx+r*(v/100)*Math.cos(a),cy+r*(v/100)*Math.sin(a)]}
+  var s='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">';
+  [.25,.5,.75,1].forEach(function(l){var d='';for(var i=0;i<n;i++){var p=pt(i,l*100);d+=(i?'L':'M')+p[0]+' '+p[1]+' '}d+='Z';s+='<path d="'+d+'" fill="none" stroke="rgba(237,228,211,.07)" stroke-width="1"/>'});
+  for(var i=0;i<n;i++){var p=pt(i,100);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p[0]+'" y2="'+p[1]+'" stroke="rgba(237,228,211,.05)" stroke-width="1"/>'}
+  var d='',pts=[];vals.forEach(function(v,i){var p=pt(i,v);pts.push(p);d+=(i?'L':'M')+p[0]+' '+p[1]+' '});d+='Z';
+  s+='<path d="'+d+'" fill="'+ac+'20" stroke="'+ac+'" stroke-width="2"/>';
+  pts.forEach(function(p){s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.5" fill="'+ac+'"/>'});
+  keys.forEach(function(k,i){var p=pt(i,122);s+='<text x="'+p[0]+'" y="'+p[1]+'" text-anchor="middle" dominant-baseline="central" fill="#9e9282" font-size="10.5" font-family="Noto Serif SC,serif">'+TL[k]+'</text>'});
+  return s+'</svg>'}
+document.addEventListener('DOMContentLoaded',function(){$('go').addEventListener('click',function(e){e.preventDefault();start()})});
+</script>
+</body>
+</html>
